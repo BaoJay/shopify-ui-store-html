@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pawuni - LED Cat Collar</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0d59f2",
+              "accent-yellow": "#fef08a",
+              "accent-pink": "#f472b6",
+              "accent-lime": "#bef264",
+              "off-white": "#f9f8f4",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .neobrutalism-shadow {
+        box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+      }
+      .speech-bubble {
+        position: relative;
+        background: #f472b6;
+        border: 4px solid black;
+      }
+      .speech-bubble:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        bottom: -20px;
+        border-width: 20px 20px 0;
+        border-style: solid;
+        border-color: black transparent;
+        display: block;
+        width: 0;
+      }
+      .sticker {
+        position: absolute;
+        pointer-events: none;
+        opacity: 0.6;
+      }
+      .polaroid {
+        background: white;
+        padding: 10px 10px 30px 10px;
+        border: 2px solid black;
+        box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.1);
+        transform: rotate(var(--rotation));
+      }
+      .nav-link {
+        @apply text-sm font-bold transition-colors uppercase;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-off-white font-display text-black transition-colors duration-300 relative overflow-x-hidden"
+  >
+    <span
+      class="material-symbols-outlined sticker text-4xl top-40 left-10 -rotate-12 text-accent-pink"
+      >star</span
+    >
+    <span
+      class="material-symbols-outlined sticker text-5xl top-20 right-20 rotate-12 text-accent-yellow"
+      >pets</span
+    >
+    <span
+      class="material-symbols-outlined sticker text-3xl bottom-40 right-10 -rotate-45 text-primary"
+      >star</span
+    >
+    <span
+      class="material-symbols-outlined sticker text-6xl bottom-20 left-20 rotate-6 text-accent-lime"
+      >pets</span
+    >
+    <header
+      class="sticky top-0 z-50 bg-white border-b-4 border-black px-6 md:px-20 py-3"
+    >
+      <div class="max-w-[1400px] mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-12">
+          <div class="flex items-center gap-2">
+            <div
+              class="size-8 bg-primary rounded border-2 border-black flex items-center justify-center text-white"
+            >
+              <span class="material-symbols-outlined text-lg font-bold"
+                >pets</span
+              >
+            </div>
+            <h2
+              class="text-xl font-black leading-tight tracking-tight uppercase"
+            >
+              Pawuni
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-6">
+            <a
+              class="nav-link hover:text-primary"
+              href="/paw-playful-bold-collection-page.html"
+              >Shop</a
+            >
+            <a
+              class="nav-link text-primary underline underline-offset-4 decoration-2"
+              href="/paw-playful-bold-collection-page.html"
+              >Gifts</a
+            >
+            <a
+              class="nav-link hover:text-primary"
+              href="/paw-playful-bold-collection-page.html"
+              >About</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <button
+            class="size-10 flex items-center justify-center bg-accent-yellow border-2 border-black rounded-full shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+          >
+            <span class="material-symbols-outlined font-bold text-xl"
+              >shopping_cart</span
+            >
+          </button>
+          <div
+            class="size-10 border-2 border-black rounded-full overflow-hidden bg-white/20"
+          >
+            <img
+              alt="User avatar"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtgKXlBTpk_iIYAFffMWMWB8HZKzo7dnVFEjk_w6slKVd5vyi6NM6-QixHsYLgQYHG_lWzNtGOjI67rhX7qVtumg3yOseIqU8Utc2xuK21oA8SLduT9IjUo6TPWQtSt8y360xigariu0AB5DJ6oYbxPnatXFDL3FERSpCTsE-MOIsFF8KQfNkH0f6dgpi9dXq4uG8Oc8gfYu0KWnq-uPa_acdKfA1oci9YlYosYk2ZoXyN9pNjlu6hRlRPMiTxPsib2DiDNILJloNB"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1400px] mx-auto px-6 py-12 md:py-20">
+      <div class="flex flex-col lg:flex-row gap-16 items-start">
+        <div class="w-full lg:w-1/2 relative">
+          <div
+            class="bg-white border-4 border-black neobrutalism-shadow overflow-hidden"
+          >
+            <img
+              alt="LED Cat Collar"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD94srQYWU_J-TBt__wGHwO2OaEUco5sPgzFq3jUibna6YHpSoHaOz3G19IcSKAhn7hY82BZX39nc5Awn68s-EI8qvhogwREH8y2NL7BwwEHz2kkI8GdoeBOnL34CWXYbDTFUJk1x3B7FRAwkw-PDTevMAethaQ3X8f_ILkDp5iLyX5m44p4gAVfjAlbOStDB5abQBoL-npm3oTwihdXqoheuSNyzHSsf729ei22wEe2IVAQP9tVUo35CYb89Dkh79uUdpjCp_l8nQ"
+            />
+          </div>
+          <div
+            class="absolute -top-6 -left-6 bg-accent-lime border-4 border-black px-6 py-2 font-black italic -rotate-6 text-xl"
+          >
+            BEST SELLER!
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 space-y-10">
+          <div class="relative">
+            <h1
+              class="text-6xl md:text-8xl font-black uppercase italic tracking-tighter text-accent-yellow leading-[0.9] -skew-x-6 drop-shadow-[6px_6px_0px_rgba(0,0,0,1)]"
+            >
+              LED CAT COLLAR
+            </h1>
+          </div>
+          <div class="inline-block speech-bubble px-8 py-4 mb-8">
+            <span class="text-4xl font-black text-white italic">$18.50</span>
+          </div>
+          <p class="text-xl font-bold leading-tight max-w-md">
+            Light up the night and let those zoomies commence! Our
+            high-visibility LED collar makes your feline friend the star of the
+            show.
+          </p>
+          <div class="space-y-6">
+            <h3
+              class="text-2xl font-black uppercase tracking-tight flex items-center gap-2"
+            >
+              Customize <span class="material-symbols-outlined">brush</span>
+            </h3>
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="px-6 py-3 border-4 border-black rounded-full bg-accent-lime font-black uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+              >
+                Neon Green
+              </button>
+              <button
+                class="px-6 py-3 border-4 border-black rounded-full bg-primary text-white font-black uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+              >
+                Electric Blue
+              </button>
+              <button
+                class="px-6 py-3 border-4 border-black rounded-full bg-accent-pink font-black uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+              >
+                Hot Pink
+              </button>
+            </div>
+          </div>
+          <button
+            class="w-full bg-primary text-white border-4 border-black p-8 flex flex-col items-center justify-center gap-1 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+          >
+            <span
+              class="text-4xl md:text-6xl font-black italic uppercase tracking-tighter"
+              >ADD TO CART</span
+            >
+            <span
+              class="text-xl font-bold uppercase tracking-widest text-accent-yellow"
+              >grab it now!</span
+            >
+          </button>
+        </div>
+      </div>
+      <section class="mt-32">
+        <div class="flex items-center gap-6 mb-12">
+          <h2
+            class="text-5xl md:text-6xl font-black uppercase italic tracking-tighter border-b-8 border-accent-pink"
+          >
+            VIBE CHECK
+          </h2>
+          <div class="flex-1 h-1 bg-black"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-8">
+          <div class="polaroid" style="--rotation: -3deg">
+            <img
+              alt="Vibe 1"
+              class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all cursor-crosshair mb-2"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuACHhlRRczDcrO7bt9mw9ofjjKMo7JOyE9WNzVYi5XgY_7MJ5v9SeeB6usX1l5NicdNCOOFjqpg0YmqPn9a6KHeRAj6Aknr0kACGMCDYQvvbTavX_QVe7ZnFmgFBXjOAP9GD58WJYGMQofTJVTqGBqH8dc5SGwdeuOYN22CBOAtIsZ6-4YfZqgFrF2c1D7UdU0aUzy4hPbK90aC1LxYbA_9k1Sjt5CLXGBsq9Yi7VzUt7FANDZKAm7JKFpagqt3-99AzS9Z89riCjUA"
+            />
+            <p class="text-[10px] font-black uppercase">@coolcat_milo</p>
+          </div>
+          <div class="polaroid" style="--rotation: 5deg">
+            <img
+              alt="Vibe 2"
+              class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all cursor-crosshair mb-2"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYyQjqE35A5527KTIArsmWtEZQqrneXE7OOx0Ue6ke-PNC2JC_ffLrCjoIS4gFAv4dRVn1IwqVFnNYXJ3d34eOgbSzFAZ8BTZlDjJdQKNTlBFF4bfDYcl_lvL_5NCZIstDtzkEcpT2JvUUqi1qAJif-0unG_BVeWS7B9V3e6vlTMu7hORFFtjuUINGjKiPcE1SXguto0raCsLqHtZi4Y0-Fk4VbpfWzy93UD_RYPGBwTQxFcngjQ_ITgmyaGsBuj7jeQ9-TJrG8SkS"
+            />
+            <p class="text-[10px] font-black uppercase">@donut_king</p>
+          </div>
+          <div class="polaroid" style="--rotation: -2deg">
+            <img
+              alt="Vibe 3"
+              class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all cursor-crosshair mb-2"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWVO2MxgXzZqUqiujdxIamKM5NPqwkv-MTanYnz2QB6bAECmEYyf9wxdKbQhJhewbrp2_7rIajbYgPFFOIvmB76eeMo1kaQwZGOMcWqsWSzyo9giCgPNfW3plQBSccOusuikTMtP4Jqfft5s8aehYrjeWpTODdrMuT4YQqF8cNjIduOjqNq6HTeieIPwFi80J_gu3d7EMXsR1eDiFKN-jKQfrKzAzabH36jURCHCK0sSBbuWeZnHgs_U5AYQNPozL2d2vJjhoFZFQv"
+            />
+            <p class="text-[10px] font-black uppercase">@disco_paws</p>
+          </div>
+          <div class="polaroid" style="--rotation: 4deg">
+            <img
+              alt="Vibe 4"
+              class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all cursor-crosshair mb-2"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaIb67K8lLk8lr_dzP8j8lB-mnAU0qb__kUX-cJGtSPctqsKk12p5gEbEvKKsASxCN0xVRrqE4FGtO8PMzXaNPUIz99ncFF7LekReEU-G8eVw-cl3LdXi8UImwXqJ_pNn8yPY9wY89aRhYsWqwJWerzxP1TMM1aElCRqZ4Eoi_qyuKjfdH35BblcZFgRZs6IsrcDzjfTJLel11eZ1287r4FzWJd7A_PIYeogNdZ15Yu4ZveiMOV3MSESoaqo5uAQB3MIIcLsNGMuEC"
+            />
+            <p class="text-[10px] font-black uppercase">@puffy_cloudd</p>
+          </div>
+          <div class="polaroid" style="--rotation: -6deg">
+            <img
+              alt="Vibe 5"
+              class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all cursor-crosshair mb-2"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpCUa4i5cvTwlAQhYB_G03zCSp6vOYgDN7C0xC6YGWUBTkqdsV4X4Q9WP8nBkV5rPjqT_KgdESHMTDtRn8Ir264A8GxTuHmlIa1b5RSs0k8Is3MYDeXRDAqkYsmjplDW4sJFJ8gH8R6cLO1d4UGiyE5gdpNKjVMnLf7LCbcFp9KUHU06NbctrqIZIsqKlhrHAoc1UswAUJe3wjbL_YIAuXqsyELuM4f2VwuB62ug4xIJPElpjavmwaMk9YldgVTTwLJNlQX8icQebl"
+            />
+            <p class="text-[10px] font-black uppercase">@neon_climber</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-black text-white py-16 px-6 mt-32 border-t-[6px] border-primary"
+    >
+      <div
+        class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12"
+      >
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5 mb-6">
+            <div
+              class="size-8 bg-primary rounded border-2 border-white flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-lg font-bold"
+                >pets</span
+              >
+            </div>
+            <h2 class="text-2xl font-black uppercase tracking-tight">Pawuni</h2>
+          </div>
+          <p
+            class="text-gray-400 font-bold text-lg max-w-xs italic leading-snug"
+          >
+            The boldest pet shop in the galaxy. Stay loud, play hard.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="font-bold uppercase text-accent-pink text-xs mb-6 tracking-[0.2em]"
+          >
+            Shop
+          </h4>
+          <ul class="flex flex-col gap-4 font-bold text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Dogs</a>
+            </li>
+            <li>
+              <a
+                class="hover:text-primary transition-colors text-accent-yellow"
+                href="#"
+                >Cats</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >New Arrivals</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-bold uppercase text-accent-pink text-xs mb-6 tracking-[0.2em]"
+          >
+            Help
+          </h4>
+          <ul class="flex flex-col gap-4 font-bold text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Shipping</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Returns</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-[1400px] mx-auto mt-16 pt-8 border-t-2 border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <p
+          class="text-[10px] font-black text-gray-500 tracking-widest uppercase"
+        >
+          © 2024 Pawuni. ALL RIGHTS RESERVED. STAY LOUD.
+        </p>
+        <div class="flex gap-3">
+          <a
+            class="size-9 flex items-center justify-center bg-gray-900 border-2 border-gray-700 rounded-lg hover:border-primary"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">share</span>
+          </a>
+          <a
+            class="size-9 flex items-center justify-center bg-gray-900 border-2 border-gray-700 rounded-lg hover:border-primary"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">camera</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

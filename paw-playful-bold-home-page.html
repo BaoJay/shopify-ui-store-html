@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pawuni Home - Playful &amp; Bold</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0d59f2",
+              "accent-yellow": "#fef08a",
+              "accent-pink": "#f472b6",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .neobrutalism-shadow {
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+      }
+      .neobrutalism-shadow-hover:hover {
+        box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+        transform: translate(-2px, -2px);
+      }
+      .blob-bg {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#0d121c] dark:text-white transition-colors duration-300"
+  >
+    <!-- Header / TopNavBar -->
+    <header
+      class="sticky top-0 z-50 bg-background-light dark:bg-background-dark border-b-4 border-black px-6 md:px-20 py-4"
+    >
+      <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-10">
+          <div class="flex items-center gap-3">
+            <div
+              class="size-10 bg-primary rounded-lg border-2 border-black flex items-center justify-center text-white"
+            >
+              <span class="material-symbols-outlined font-bold">pets</span>
+            </div>
+            <h2
+              class="text-2xl font-black leading-tight tracking-tight uppercase"
+            >
+              Pawuni
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-base font-bold hover:text-primary transition-colors uppercase"
+              href="/paw-playful-bold-collection-page.html"
+              >Shop</a
+            >
+            <a
+              class="text-base font-bold hover:text-primary transition-colors uppercase"
+              href="/paw-playful-bold-collection-page.html"
+              >Gifts</a
+            >
+            <a
+              class="text-base font-bold hover:text-primary transition-colors uppercase"
+              href="/paw-playful-bold-collection-page.html"
+              >About</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="hidden sm:flex items-center bg-white dark:bg-slate-800 border-2 border-black rounded-lg px-3 py-1"
+          >
+            <span class="material-symbols-outlined text-gray-500">search</span>
+            <input
+              class="bg-transparent border-none focus:ring-0 text-sm font-bold w-32 lg:w-48"
+              placeholder="SEARCH GIFTS..."
+              type="text"
+            />
+          </div>
+          <button
+            class="size-11 flex items-center justify-center bg-accent-yellow border-2 border-black rounded-lg neobrutalism-shadow transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
+          >
+            <span class="material-symbols-outlined font-bold"
+              >shopping_cart</span
+            >
+          </button>
+          <div
+            class="size-11 border-2 border-black rounded-full overflow-hidden bg-primary/20"
+          >
+            <img
+              alt="User avatar profile picture"
+              class="w-full h-full object-cover"
+              data-alt="User profile avatar icon"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtgKXlBTpk_iIYAFffMWMWB8HZKzo7dnVFEjk_w6slKVd5vyi6NM6-QixHsYLgQYHG_lWzNtGOjI67rhX7qVtumg3yOseIqU8Utc2xuK21oA8SLduT9IjUo6TPWQtSt8y360xigariu0AB5DJ6oYbxPnatXFDL3FERSpCTsE-MOIsFF8KQfNkH0f6dgpi9dXq4uG8Oc8gfYu0KWnq-uPa_acdKfA1oci9YlYosYk2ZoXyN9pNjlu6hRlRPMiTxPsib2DiDNILJloNB"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1200px] mx-auto px-6 py-10">
+      <!-- Hero Section -->
+      <section
+        class="relative overflow-hidden rounded-3xl bg-primary border-4 border-black p-8 md:p-16 mb-20 neobrutalism-shadow"
+      >
+        <!-- Decorative Elements -->
+        <div class="absolute top-10 right-10 opacity-20 transform rotate-12">
+          <span class="material-symbols-outlined text-[120px] text-white"
+            >grade</span
+          >
+        </div>
+        <div
+          class="absolute -bottom-10 -left-10 size-64 bg-accent-yellow blob-bg opacity-30"
+        ></div>
+        <div
+          class="relative z-10 flex flex-col lg:flex-row items-center gap-12"
+        >
+          <div class="flex-1 text-white">
+            <div
+              class="inline-block bg-accent-pink text-black text-xs font-black px-3 py-1 rounded-full border-2 border-black mb-6 uppercase tracking-widest"
+            >
+              New Collection Drop
+            </div>
+            <h1
+              class="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter mb-6 uppercase italic"
+            >
+              TREAT <br />
+              THEM <span class="text-accent-yellow">BIG</span>
+            </h1>
+            <p class="text-xl font-bold mb-10 max-w-md leading-snug">
+              Loud gifts for the pets who run the house. From neon chews to
+              disco feeders.
+            </p>
+            <button
+              class="group relative inline-flex items-center gap-3 bg-accent-pink text-black px-10 py-5 rounded-xl border-4 border-black text-xl font-black uppercase tracking-tight neobrutalism-shadow hover:bg-white transition-all"
+            >
+              Shop Now
+              <span
+                class="material-symbols-outlined font-black group-hover:translate-x-2 transition-transform"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+          <div class="flex-1 relative">
+            <div
+              class="absolute inset-0 bg-accent-yellow rounded-full scale-110 border-4 border-black border-dashed opacity-50 animate-pulse"
+            ></div>
+            <div
+              class="relative rounded-2xl border-4 border-black overflow-hidden neobrutalism-shadow rotate-3 hover:rotate-0 transition-transform duration-500"
+            >
+              <img
+                alt="Dog with sunglasses"
+                class="w-full h-auto"
+                data-alt="Funny dog wearing oversized pink sunglasses"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSLjLPH-6SlXp-E8NyiRSGhbwnBAzIETWS29X84g9jNCn5RDM9_wTwfa3wX_RC7giq0MIEQZw8kOgYlzvjWnhk_rlUdPlKhbiXg5ZF7YM7zCYhCJc02uJ1-zBM-cI9NvHyPIqHCvKkb4LlWyX_FO7ocuOCYyqjvkoIsTfoxArgftmyqyD8VAYI788KQEkU-tJ1fPKHPi7VEPrXHH83fhS8M_tW1ZrZT06vIYT95xY6wZ0pEJMenjU40oeiTLBlt_NnSwETwYXp2O19"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Category Grid Section -->
+      <section class="mb-20">
+        <div class="flex items-center gap-4 mb-10">
+          <h2 class="text-4xl font-black uppercase italic tracking-tighter">
+            Shop the Vibe
+          </h2>
+          <div class="h-1 flex-1 bg-black rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Category Card 1 -->
+          <div
+            class="group relative bg-white dark:bg-slate-800 border-4 border-black rounded-2xl p-6 neobrutalism-shadow-hover transition-all flex flex-col h-[400px]"
+          >
+            <div class="absolute top-4 right-4 z-10">
+              <div
+                class="bg-primary text-white border-2 border-black px-4 py-2 rounded-full font-black uppercase text-sm -rotate-12"
+              >
+                Meow!
+              </div>
+            </div>
+            <div
+              class="flex-1 overflow-hidden rounded-xl border-2 border-black mb-6"
+            >
+              <img
+                alt="Cat Gifts"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                data-alt="Playful cat surrounded by colorful toys"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuACHhlRRczDcrO7bt9mw9ofjjKMo7JOyE9WNzVYi5XgY_7MJ5v9SeeB6usX1l5NicdNCOOFjqpg0YmqPn9a6KHeRAj6Aknr0kACGMCDYQvvbTavX_QVe7ZnFmgFBXjOAP9GD58WJYGMQofTJVTqGBqH8dc5SGwdeuOYN22CBOAtIsZ6-4YfZqgFrF2c1D7UdU0aUzy4hPbK90aC1LxYbA_9k1Sjt5CLXGBsq9Yi7VzUt7FANDZKAm7JKFpagqt3-99AzS9Z89riCjUA"
+              />
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-3xl font-black uppercase tracking-tight">
+                  Party Animals
+                </h3>
+                <p class="font-bold opacity-70 italic">(The Cat Collection)</p>
+              </div>
+              <button
+                class="size-14 rounded-full bg-accent-yellow border-4 border-black flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <span class="material-symbols-outlined font-black"
+                  >arrow_forward_ios</span
+                >
+              </button>
+            </div>
+          </div>
+          <!-- Category Card 2 -->
+          <div
+            class="group relative bg-white dark:bg-slate-800 border-4 border-black rounded-2xl p-6 neobrutalism-shadow-hover transition-all flex flex-col h-[400px]"
+          >
+            <div class="absolute top-4 right-4 z-10">
+              <div
+                class="bg-accent-pink text-black border-2 border-black px-4 py-2 rounded-full font-black uppercase text-sm rotate-12"
+              >
+                Woof!
+              </div>
+            </div>
+            <div
+              class="flex-1 overflow-hidden rounded-xl border-2 border-black mb-6"
+            >
+              <img
+                alt="Dog Gifts"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                data-alt="Happy dog catching a neon yellow ball"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpCUa4i5cvTwlAQhYB_G03zCSp6vOYgDN7C0xC6YGWUBTkqdsV4X4Q9WP8nBkV5rPjqT_KgdESHMTDtRn8Ir264A8GxTuHmlIa1b5RSs0k8Is3MYDeXRDAqkYsmjplDW4sJFJ8gH8R6cLO1d4UGiyE5gdpNKjVMnLf7LCbcFp9KUHU06NbctrqIZIsqKlhrHAoc1UswAUJe3wjbL_YIAuXqsyELuM4f2VwuB62ug4xIJPElpjavmwaMk9YldgVTTwLJNlQX8icQebl"
+              />
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-3xl font-black uppercase tracking-tight">
+                  Goodest Boys
+                </h3>
+                <p class="font-bold opacity-70 italic">(The Dog Collection)</p>
+              </div>
+              <button
+                class="size-14 rounded-full bg-accent-pink border-4 border-black flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <span class="material-symbols-outlined font-black"
+                  >arrow_forward_ios</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Trending Treats / Product Grid -->
+      <section class="mb-20">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+        >
+          <div>
+            <h2 class="text-4xl font-black uppercase italic tracking-tighter">
+              Trending Treats
+            </h2>
+            <p class="text-lg font-bold opacity-60">
+              Stuff everyone's paws are on right now.
+            </p>
+          </div>
+          <button
+            class="bg-white dark:bg-slate-800 border-2 border-black px-6 py-2 rounded-lg font-black uppercase hover:bg-black hover:text-white transition-all"
+          >
+            View All
+          </button>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product Card 1 -->
+          <div
+            class="bg-white dark:bg-slate-800 border-2 border-black p-4 rounded-xl neobrutalism-shadow-hover transition-all"
+          >
+            <div
+              class="aspect-square rounded-lg border-2 border-black bg-gray-100 overflow-hidden mb-4 relative"
+            >
+              <img
+                alt="Product"
+                class="w-full h-full object-cover"
+                data-alt="Neon blue chew bone toy"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD94srQYWU_J-TBt__wGHwO2OaEUco5sPgzFq3jUibna6YHpSoHaOz3G19IcSKAhn7hY82BZX39nc5Awn68s-EI8qvhogwREH8y2NL7BwwEHz2kkI8GdoeBOnL34CWXYbDTFUJk1x3B7FRAwkw-PDTevMAethaQ3X8f_ILkDp5iLyX5m44p4gAVfjAlbOStDB5abQBoL-npm3oTwihdXqoheuSNyzHSsf729ei22wEe2IVAQP9tVUo35CYb89Dkh79uUdpjCp_l8nQ"
+              />
+              <div
+                class="absolute top-2 left-2 bg-primary text-white text-[10px] font-black px-2 py-1 border border-black rounded uppercase"
+              >
+                Top Rated
+              </div>
+            </div>
+            <h4 class="font-black uppercase tracking-tight mb-1 truncate">
+              Neon Chew Bone
+            </h4>
+            <p class="text-primary font-black mb-4">$24.00</p>
+            <button
+              class="w-full py-2 bg-accent-yellow border-2 border-black rounded font-black uppercase text-xs hover:bg-black hover:text-white transition-colors"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <!-- Product Card 2 -->
+          <div
+            class="bg-white dark:bg-slate-800 border-2 border-black p-4 rounded-xl neobrutalism-shadow-hover transition-all lg:mt-4"
+          >
+            <div
+              class="aspect-square rounded-lg border-2 border-black bg-gray-100 overflow-hidden mb-4 relative"
+            >
+              <img
+                alt="Product"
+                class="w-full h-full object-cover"
+                data-alt="Sparkly disco ball slow feeder bowl"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWVO2MxgXzZqUqiujdxIamKM5NPqwkv-MTanYnz2QB6bAECmEYyf9wxdKbQhJhewbrp2_7rIajbYgPFFOIvmB76eeMo1kaQwZGOMcWqsWSzyo9giCgPNfW3plQBSccOusuikTMtP4Jqfft5s8aehYrjeWpTODdrMuT4YQqF8cNjIduOjqNq6HTeieIPwFi80J_gu3d7EMXsR1eDiFKN-jKQfrKzAzabH36jURCHCK0sSBbuWeZnHgs_U5AYQNPozL2d2vJjhoFZFQv"
+              />
+              <div
+                class="absolute top-2 left-2 bg-accent-pink text-black text-[10px] font-black px-2 py-1 border border-black rounded uppercase"
+              >
+                Viral
+              </div>
+            </div>
+            <h4 class="font-black uppercase tracking-tight mb-1 truncate">
+              Disco Slow Feeder
+            </h4>
+            <p class="text-primary font-black mb-4">$38.00</p>
+            <button
+              class="w-full py-2 bg-accent-yellow border-2 border-black rounded font-black uppercase text-xs hover:bg-black hover:text-white transition-colors"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <!-- Product Card 3 -->
+          <div
+            class="bg-white dark:bg-slate-800 border-2 border-black p-4 rounded-xl neobrutalism-shadow-hover transition-all"
+          >
+            <div
+              class="aspect-square rounded-lg border-2 border-black bg-gray-100 overflow-hidden mb-4 relative"
+            >
+              <img
+                alt="Product"
+                class="w-full h-full object-cover"
+                data-alt="Electric blue puffer vest for dogs"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaIb67K8lLk8lr_dzP8j8lB-mnAU0qb__kUX-cJGtSPctqsKk12p5gEbEvKKsASxCN0xVRrqE4FGtO8PMzXaNPUIz99ncFF7LekReEU-G8eVw-cl3LdXi8UImwXqJ_pNn8yPY9wY89aRhYsWqwJWerzxP1TMM1aElCRqZ4Eoi_qyuKjfdH35BblcZFgRZs6IsrcDzjfTJLel11eZ1287r4FzWJd7A_PIYeogNdZ15Yu4ZveiMOV3MSESoaqo5uAQB3MIIcLsNGMuEC"
+              />
+            </div>
+            <h4 class="font-black uppercase tracking-tight mb-1 truncate">
+              Hyper-Puff Vest
+            </h4>
+            <p class="text-primary font-black mb-4">$55.00</p>
+            <button
+              class="w-full py-2 bg-accent-yellow border-2 border-black rounded font-black uppercase text-xs hover:bg-black hover:text-white transition-colors"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <!-- Product Card 4 -->
+          <div
+            class="bg-white dark:bg-slate-800 border-2 border-black p-4 rounded-xl neobrutalism-shadow-hover transition-all lg:mt-4"
+          >
+            <div
+              class="aspect-square rounded-lg border-2 border-black bg-gray-100 overflow-hidden mb-4 relative"
+            >
+              <img
+                alt="Product"
+                class="w-full h-full object-cover"
+                data-alt="Handcrafted catnip plush donuts set"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYyQjqE35A5527KTIArsmWtEZQqrneXE7OOx0Ue6ke-PNC2JC_ffLrCjoIS4gFAv4dRVn1IwqVFnNYXJ3d34eOgbSzFAZ8BTZlDjJdQKNTlBFF4bfDYcl_lvL_5NCZIstDtzkEcpT2JvUUqi1qAJif-0unG_BVeWS7B9V3e6vlTMu7hORFFtjuUINGjKiPcE1SXguto0raCsLqHtZi4Y0-Fk4VbpfWzy93UD_RYPGBwTQxFcngjQ_ITgmyaGsBuj7jeQ9-TJrG8SkS"
+              />
+              <div
+                class="absolute top-2 left-2 bg-black text-white text-[10px] font-black px-2 py-1 border border-black rounded uppercase"
+              >
+                Limited
+              </div>
+            </div>
+            <h4 class="font-black uppercase tracking-tight mb-1 truncate">
+              Catnip Donut Set
+            </h4>
+            <p class="text-primary font-black mb-4">$19.00</p>
+            <button
+              class="w-full py-2 bg-accent-yellow border-2 border-black rounded font-black uppercase text-xs hover:bg-black hover:text-white transition-colors"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Newsletter / Footer CTA -->
+      <section
+        class="bg-accent-yellow border-4 border-black rounded-3xl p-10 md:p-16 mb-20 text-center relative overflow-hidden neobrutalism-shadow"
+      >
+        <div class="absolute top-0 left-0 p-4 opacity-10">
+          <span class="material-symbols-outlined text-9xl">pets</span>
+        </div>
+        <div class="relative z-10">
+          <h2
+            class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-4"
+          >
+            Join the Pack
+          </h2>
+          <p class="text-xl font-bold mb-10 opacity-80">
+            Get 15% off your first gift plus exclusive pet drops.
+          </p>
+          <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+            <input
+              class="flex-1 bg-white border-4 border-black px-6 py-4 rounded-xl text-lg font-black focus:ring-0 focus:outline-none placeholder:text-gray-300"
+              placeholder="YOUR@EMAIL.COM"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white border-4 border-black px-10 py-4 rounded-xl text-xl font-black uppercase tracking-tight hover:bg-black transition-colors neobrutalism-shadow"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black text-white py-16 px-6">
+      <div
+        class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12"
+      >
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="size-8 bg-primary rounded border border-white flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-sm">pets</span>
+            </div>
+            <h2 class="text-2xl font-black uppercase tracking-tight">Pawuni</h2>
+          </div>
+          <p class="text-gray-400 font-bold max-w-sm">
+            Making the world a bit more colorful, one wag and purr at a time.
+            The boldest pet shop in the galaxy.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-black uppercase text-accent-pink mb-6">Shop</h4>
+          <ul class="flex flex-col gap-4 font-bold">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Dogs</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Cats</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >New Arrivals</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Sale</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-black uppercase text-accent-pink mb-6">Support</h4>
+          <ul class="flex flex-col gap-4 font-bold">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Shipping</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Returns</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">FAQ</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-[1200px] mx-auto mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <p class="text-sm font-bold text-gray-500">
+          © 2024 Pawuni. ALL RIGHTS RESERVED. STAY LOUD.
+        </p>
+        <div class="flex gap-6">
+          <a
+            class="size-10 flex items-center justify-center bg-gray-900 border border-gray-700 rounded-lg hover:border-primary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">share</span>
+          </a>
+          <a
+            class="size-10 flex items-center justify-center bg-gray-900 border border-gray-700 rounded-lg hover:border-primary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">camera</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

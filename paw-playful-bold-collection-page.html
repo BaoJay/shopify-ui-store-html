@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pawuni - Cat Gifts Collection</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0d59f2",
+              "accent-yellow": "#fef08a",
+              "accent-pink": "#f472b6",
+              "accent-lime": "#bef264",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .neobrutalism-shadow {
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+      }
+      .neobrutalism-shadow-hover:hover {
+        box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+        transform: translate(-4px, -4px);
+      }
+      .pop-art-shadow {
+        box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+      }
+      .sticker-badge {
+        @apply absolute z-20 font-black uppercase text-[10px] px-2 py-0.5 border-2 border-black;
+      }
+      .chunky-checkbox {
+        @apply appearance-none size-5 border-2 border-black rounded-full cursor-pointer checked:bg-primary checked:border-primary relative transition-all ring-offset-2 focus:ring-2 focus:ring-primary;
+      }
+      .chunky-checkbox:checked::after {
+        content: "";
+        @apply absolute inset-1 bg-white rounded-full;
+      }
+      .nav-link {
+        @apply text-sm font-bold transition-colors uppercase;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#0d121c] dark:text-white transition-colors duration-300"
+  >
+    <header
+      class="sticky top-0 z-50 bg-white border-b-4 border-black px-6 md:px-20 py-3 text-black"
+    >
+      <div class="max-w-[1400px] mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-12">
+          <div class="flex items-center gap-2">
+            <div
+              class="size-8 bg-primary rounded border-2 border-black flex items-center justify-center text-white"
+            >
+              <span class="material-symbols-outlined text-lg font-bold"
+                >pets</span
+              >
+            </div>
+            <h2
+              class="text-xl font-black leading-tight tracking-tight uppercase"
+            >
+              Pawuni
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-6">
+            <a
+              class="nav-link hover:text-primary"
+              href="/paw-playful-bold-collection-page.html"
+              >Shop</a
+            >
+            <a
+              class="nav-link text-primary underline underline-offset-4 decoration-2"
+              href="/paw-playful-bold-collection-page.html"
+              >Gifts</a
+            >
+            <a
+              class="nav-link hover:text-primary"
+              href="/paw-playful-bold-collection-page.html"
+              >About</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="hidden sm:flex items-center bg-gray-100 border-2 border-black rounded px-3 py-1"
+          >
+            <span class="material-symbols-outlined text-gray-500 text-xl"
+              >search</span
+            >
+            <input
+              class="bg-transparent border-none focus:ring-0 text-xs font-bold w-32 lg:w-48 text-black placeholder:text-gray-400 uppercase"
+              placeholder="SEARCH GIFTS..."
+              type="text"
+            />
+          </div>
+          <button
+            class="size-10 flex items-center justify-center bg-accent-yellow border-2 border-black rounded-full shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none text-black"
+          >
+            <span class="material-symbols-outlined font-bold text-xl"
+              >shopping_cart</span
+            >
+          </button>
+          <div
+            class="size-10 border-2 border-black rounded-full overflow-hidden bg-white/20"
+          >
+            <img
+              alt="User avatar"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtgKXlBTpk_iIYAFffMWMWB8HZKzo7dnVFEjk_w6slKVd5vyi6NM6-QixHsYLgQYHG_lWzNtGOjI67rhX7qVtumg3yOseIqU8Utc2xuK21oA8SLduT9IjUo6TPWQtSt8y360xigariu0AB5DJ6oYbxPnatXFDL3FERSpCTsE-MOIsFF8KQfNkH0f6dgpi9dXq4uG8Oc8gfYu0KWnq-uPa_acdKfA1oci9YlYosYk2ZoXyN9pNjlu6hRlRPMiTxPsib2DiDNILJloNB"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1400px] mx-auto px-6 py-10">
+      <div class="mb-12">
+        <h1
+          class="text-7xl md:text-8xl font-black italic uppercase tracking-tighter text-accent-yellow drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] inline-block"
+        >
+          CAT GIFTS
+        </h1>
+        <div
+          class="h-2.5 bg-primary border-[3px] border-black mt-2 w-full max-w-lg"
+        ></div>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-12">
+        <aside class="w-full lg:w-56 flex-shrink-0">
+          <div class="sticky top-28 space-y-8">
+            <div class="bg-white border-4 border-black p-5 pop-art-shadow">
+              <h3
+                class="text-lg font-black uppercase mb-6 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-xl"
+                  >filter_list</span
+                >
+                Filters
+              </h3>
+              <div class="mb-6">
+                <h4
+                  class="font-bold uppercase text-[10px] mb-3 tracking-widest text-primary"
+                >
+                  Price
+                </h4>
+                <div class="space-y-2.5">
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input class="chunky-checkbox" type="checkbox" />
+                    <span
+                      class="font-bold uppercase text-[11px] group-hover:text-primary transition-colors"
+                      >Under $25</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input checked="" class="chunky-checkbox" type="checkbox" />
+                    <span
+                      class="font-bold uppercase text-[11px] group-hover:text-primary transition-colors"
+                      >$25 - $50</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input class="chunky-checkbox" type="checkbox" />
+                    <span
+                      class="font-bold uppercase text-[11px] group-hover:text-primary transition-colors"
+                      >$50+</span
+                    >
+                  </label>
+                </div>
+              </div>
+              <div class="mb-6">
+                <h4
+                  class="font-bold uppercase text-[10px] mb-3 tracking-widest text-primary"
+                >
+                  Vibe
+                </h4>
+                <div class="space-y-2.5">
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input checked="" class="chunky-checkbox" type="checkbox" />
+                    <span
+                      class="font-bold uppercase text-[11px] group-hover:text-primary transition-colors"
+                      >Neon</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input class="chunky-checkbox" type="checkbox" />
+                    <span
+                      class="font-bold uppercase text-[11px] group-hover:text-primary transition-colors"
+                      >Disco</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input checked="" class="chunky-checkbox" type="checkbox" />
+                    <span
+                      class="font-bold uppercase text-[11px] group-hover:text-primary transition-colors"
+                      >Hyper</span
+                    >
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h4
+                  class="font-bold uppercase text-[10px] mb-3 tracking-widest text-primary"
+                >
+                  Status
+                </h4>
+                <div class="space-y-2.5">
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input class="chunky-checkbox" type="checkbox" />
+                    <span
+                      class="font-bold uppercase text-[11px] group-hover:text-primary transition-colors"
+                      >In Stock</span
+                    >
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-accent-pink border-4 border-black p-5 pop-art-shadow -rotate-2"
+            >
+              <p class="font-black uppercase italic leading-tight text-lg">
+                New drops every Friday!
+              </p>
+            </div>
+          </div>
+        </aside>
+        <div class="flex-1">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div class="relative group">
+              <div
+                class="sticker-badge bg-accent-yellow top-4 -left-3 -rotate-12"
+              >
+                HOT!
+              </div>
+              <div
+                class="bg-accent-lime border-4 border-black p-4 pop-art-shadow neobrutalism-shadow-hover transition-all h-full flex flex-col"
+              >
+                <div
+                  class="aspect-square border-4 border-black bg-white overflow-hidden mb-4"
+                >
+                  <img
+                    alt="Electronic Mouse Chaser"
+                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuACHhlRRczDcrO7bt9mw9ofjjKMo7JOyE9WNzVYi5XgY_7MJ5v9SeeB6usX1l5NicdNCOOFjqpg0YmqPn9a6KHeRAj6Aknr0kACGMCDYQvvbTavX_QVe7ZnFmgFBXjOAP9GD58WJYGMQofTJVTqGBqH8dc5SGwdeuOYN22CBOAtIsZ6-4YfZqgFrF2c1D7UdU0aUzy4hPbK90aC1LxYbA_9k1Sjt5CLXGBsq9Yi7VzUt7FANDZKAm7JKFpagqt3-99AzS9Z89riCjUA"
+                  />
+                </div>
+                <h3 class="text-xl font-black uppercase mb-1 leading-tight">
+                  Electronic Mouse Chaser
+                </h3>
+                <p class="font-bold opacity-80 mb-6 italic text-sm">
+                  The hunt is on.
+                </p>
+                <div class="mt-auto flex items-center justify-between gap-4">
+                  <span class="text-xl font-black">$29.99</span>
+                  <button
+                    class="bg-primary text-white border-2 border-black px-3 py-1.5 font-black uppercase text-[10px] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                  >
+                    QUICK SNAG
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative group">
+              <div class="sticker-badge bg-white top-4 -right-3 rotate-12">
+                NEW
+              </div>
+              <div
+                class="bg-accent-pink border-4 border-black p-4 pop-art-shadow neobrutalism-shadow-hover transition-all h-full flex flex-col"
+              >
+                <div
+                  class="aspect-square border-4 border-black bg-white overflow-hidden mb-4"
+                >
+                  <img
+                    alt="LED Cat Collar"
+                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD94srQYWU_J-TBt__wGHwO2OaEUco5sPgzFq3jUibna6YHpSoHaOz3G19IcSKAhn7hY82BZX39nc5Awn68s-EI8qvhogwREH8y2NL7BwwEHz2kkI8GdoeBOnL34CWXYbDTFUJk1x3B7FRAwkw-PDTevMAethaQ3X8f_ILkDp5iLyX5m44p4gAVfjAlbOStDB5abQBoL-npm3oTwihdXqoheuSNyzHSsf729ei22wEe2IVAQP9tVUo35CYb89Dkh79uUdpjCp_l8nQ"
+                  />
+                </div>
+                <h3 class="text-xl font-black uppercase mb-1 leading-tight">
+                  LED Cat Collar
+                </h3>
+                <p class="font-bold opacity-80 mb-6 italic text-sm">
+                  Glow in the dark zoomies.
+                </p>
+                <div class="mt-auto flex items-center justify-between gap-4">
+                  <span class="text-xl font-black">$18.50</span>
+                  <button
+                    class="bg-accent-yellow text-black border-2 border-black px-3 py-1.5 font-black uppercase text-[10px] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                  >
+                    QUICK SNAG
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative group">
+              <div
+                class="bg-accent-yellow border-4 border-black p-4 pop-art-shadow neobrutalism-shadow-hover transition-all h-full flex flex-col"
+              >
+                <div
+                  class="aspect-square border-4 border-black bg-white overflow-hidden mb-4"
+                >
+                  <img
+                    alt="Disco Ball Feeder"
+                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWVO2MxgXzZqUqiujdxIamKM5NPqwkv-MTanYnz2QB6bAECmEYyf9wxdKbQhJhewbrp2_7rIajbYgPFFOIvmB76eeMo1kaQwZGOMcWqsWSzyo9giCgPNfW3plQBSccOusuikTMtP4Jqfft5s8aehYrjeWpTODdrMuT4YQqF8cNjIduOjqNq6HTeieIPwFi80J_gu3d7EMXsR1eDiFKN-jKQfrKzAzabH36jURCHCK0sSBbuWeZnHgs_U5AYQNPozL2d2vJjhoFZFQv"
+                  />
+                </div>
+                <h3 class="text-xl font-black uppercase mb-1 leading-tight">
+                  Disco Ball Feeder
+                </h3>
+                <p class="font-bold opacity-80 mb-6 italic text-sm">
+                  Dinner is a party.
+                </p>
+                <div class="mt-auto flex items-center justify-between gap-4">
+                  <span class="text-xl font-black">$42.00</span>
+                  <button
+                    class="bg-primary text-white border-2 border-black px-3 py-1.5 font-black uppercase text-[10px] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                  >
+                    QUICK SNAG
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative group">
+              <div
+                class="sticker-badge bg-primary text-white bottom-20 -left-4 -rotate-12"
+              >
+                LIMITED
+              </div>
+              <div
+                class="bg-accent-lime border-4 border-black p-4 pop-art-shadow neobrutalism-shadow-hover transition-all h-full flex flex-col"
+              >
+                <div
+                  class="aspect-square border-4 border-black bg-white overflow-hidden mb-4"
+                >
+                  <img
+                    alt="Catnip Donut Set"
+                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYyQjqE35A5527KTIArsmWtEZQqrneXE7OOx0Ue6ke-PNC2JC_ffLrCjoIS4gFAv4dRVn1IwqVFnNYXJ3d34eOgbSzFAZ8BTZlDjJdQKNTlBFF4bfDYcl_lvL_5NCZIstDtzkEcpT2JvUUqi1qAJif-0unG_BVeWS7B9V3e6vlTMu7hORFFtjuUINGjKiPcE1SXguto0raCsLqHtZi4Y0-Fk4VbpfWzy93UD_RYPGBwTQxFcngjQ_ITgmyaGsBuj7jeQ9-TJrG8SkS"
+                  />
+                </div>
+                <h3 class="text-xl font-black uppercase mb-1 leading-tight">
+                  Catnip Donut Set
+                </h3>
+                <p class="font-bold opacity-80 mb-6 italic text-sm">
+                  Freshly baked chaos.
+                </p>
+                <div class="mt-auto flex items-center justify-between gap-4">
+                  <span class="text-xl font-black">$19.99</span>
+                  <button
+                    class="bg-accent-pink text-black border-2 border-black px-3 py-1.5 font-black uppercase text-[10px] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                  >
+                    QUICK SNAG
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative group">
+              <div
+                class="bg-accent-pink border-4 border-black p-4 pop-art-shadow neobrutalism-shadow-hover transition-all h-full flex flex-col"
+              >
+                <div
+                  class="aspect-square border-4 border-black bg-white overflow-hidden mb-4"
+                >
+                  <img
+                    alt="Neon Climbing Wall"
+                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpCUa4i5cvTwlAQhYB_G03zCSp6vOYgDN7C0xC6YGWUBTkqdsV4X4Q9WP8nBkV5rPjqT_KgdESHMTDtRn8Ir264A8GxTuHmlIa1b5RSs0k8Is3MYDeXRDAqkYsmjplDW4sJFJ8gH8R6cLO1d4UGiyE5gdpNKjVMnLf7LCbcFp9KUHU06NbctrqIZIsqKlhrHAoc1UswAUJe3wjbL_YIAuXqsyELuM4f2VwuB62ug4xIJPElpjavmwaMk9YldgVTTwLJNlQX8icQebl"
+                  />
+                </div>
+                <h3 class="text-xl font-black uppercase mb-1 leading-tight">
+                  Neon Climbing Wall
+                </h3>
+                <p class="font-bold opacity-80 mb-6 italic text-sm">
+                  Vertical parkour style.
+                </p>
+                <div class="mt-auto flex items-center justify-between gap-4">
+                  <span class="text-xl font-black">$125.00</span>
+                  <button
+                    class="bg-accent-yellow text-black border-2 border-black px-3 py-1.5 font-black uppercase text-[10px] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                  >
+                    QUICK SNAG
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative group">
+              <div
+                class="sticker-badge bg-black text-white top-4 -right-3 rotate-12"
+              >
+                FAVE
+              </div>
+              <div
+                class="bg-accent-yellow border-4 border-black p-4 pop-art-shadow neobrutalism-shadow-hover transition-all h-full flex flex-col"
+              >
+                <div
+                  class="aspect-square border-4 border-black bg-white overflow-hidden mb-4"
+                >
+                  <img
+                    alt="Hyper-Puff Bed"
+                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaIb67K8lLk8lr_dzP8j8lB-mnAU0qb__kUX-cJGtSPctqsKk12p5gEbEvKKsASxCN0xVRrqE4FGtO8PMzXaNPUIz99ncFF7LekReEU-G8eVw-cl3LdXi8UImwXqJ_pNn8yPY9wY89aRhYsWqwJWerzxP1TMM1aElCRqZ4Eoi_qyuKjfdH35BblcZFgRZs6IsrcDzjfTJLel11eZ1287r4FzWJd7A_PIYeogNdZ15Yu4ZveiMOV3MSESoaqo5uAQB3MIIcLsNGMuEC"
+                  />
+                </div>
+                <h3 class="text-xl font-black uppercase mb-1 leading-tight">
+                  Hyper-Puff Bed
+                </h3>
+                <p class="font-bold opacity-80 mb-6 italic text-sm">
+                  Sleep on a cloud.
+                </p>
+                <div class="mt-auto flex items-center justify-between gap-4">
+                  <span class="text-xl font-black">$65.00</span>
+                  <button
+                    class="bg-primary text-white border-2 border-black px-3 py-1.5 font-black uppercase text-[10px] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                  >
+                    QUICK SNAG
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-16 flex justify-center gap-3">
+            <button
+              class="size-10 bg-white border-[3px] border-black flex items-center justify-center font-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-accent-yellow transition-colors"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >chevron_left</span
+              >
+            </button>
+            <button
+              class="size-10 bg-accent-yellow border-[3px] border-black flex items-center justify-center font-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+            >
+              1
+            </button>
+            <button
+              class="size-10 bg-white border-[3px] border-black flex items-center justify-center font-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-accent-yellow transition-colors"
+            >
+              2
+            </button>
+            <button
+              class="size-10 bg-white border-[3px] border-black flex items-center justify-center font-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-accent-yellow transition-colors"
+            >
+              3
+            </button>
+            <button
+              class="size-10 bg-white border-[3px] border-black flex items-center justify-center font-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-accent-yellow transition-colors"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >chevron_right</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-black text-white py-16 px-6 mt-16 border-t-[6px] border-primary"
+    >
+      <div
+        class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12"
+      >
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5 mb-6">
+            <div
+              class="size-8 bg-primary rounded border-2 border-white flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-lg">pets</span>
+            </div>
+            <h2 class="text-2xl font-black uppercase tracking-tight">Pawuni</h2>
+          </div>
+          <p
+            class="text-gray-400 font-bold text-lg max-w-xs italic leading-snug"
+          >
+            The boldest pet shop in the galaxy. Stay loud, play hard.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="font-bold uppercase text-accent-pink text-xs mb-6 tracking-[0.2em]"
+          >
+            Shop
+          </h4>
+          <ul class="flex flex-col gap-4 font-bold text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Dogs</a>
+            </li>
+            <li>
+              <a
+                class="hover:text-primary transition-colors text-accent-yellow"
+                href="#"
+                >Cats</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >New Arrivals</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Sale</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-bold uppercase text-accent-pink text-xs mb-6 tracking-[0.2em]"
+          >
+            Help
+          </h4>
+          <ul class="flex flex-col gap-4 font-bold text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Shipping</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Returns</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-[1400px] mx-auto mt-16 pt-8 border-t-2 border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <p
+          class="text-[10px] font-black text-gray-500 tracking-widest uppercase"
+        >
+          © 2024 Pawuni. ALL RIGHTS RESERVED. STAY LOUD.
+        </p>
+        <div class="flex gap-3">
+          <a
+            class="size-9 flex items-center justify-center bg-gray-900 border-2 border-gray-700 rounded-lg hover:border-primary transition-colors hover:text-primary"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">share</span>
+          </a>
+          <a
+            class="size-9 flex items-center justify-center bg-gray-900 border-2 border-gray-700 rounded-lg hover:border-primary transition-colors hover:text-primary"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">camera</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
