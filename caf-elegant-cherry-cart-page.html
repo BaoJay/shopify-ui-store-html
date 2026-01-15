@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shopping Cart | Elegant Cherry Boutique</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#9B1B30", // Deep Cherry Red
+              "background-light": "#FFFFFF",
+              "background-dark": "#121212",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              xl: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #9b1b30;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300"
+  >
+    <div
+      class="bg-primary text-white py-2 text-center text-sm font-medium tracking-wide"
+    >
+      Get <span class="font-bold">10% OFF</span> when you add 2+ gifts. Free
+      Shipping on orders over $80.
+    </div>
+    <header
+      class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center"
+          >
+            <span class="text-white font-display text-2xl font-bold">C</span>
+          </div>
+          <span
+            class="font-display text-2xl font-bold tracking-tight text-primary"
+            >CherryBoutique</span
+          >
+        </div>
+        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+          <a class="hover:text-primary transition-colors" href="#">Occasions</a>
+          <a class="hover:text-primary transition-colors" href="#"
+            >Recipients</a
+          >
+          <a class="hover:text-primary transition-colors" href="#">Drinkware</a>
+          <a class="hover:text-primary transition-colors" href="#"
+            >New Arrivals</a
+          >
+        </nav>
+        <div class="flex items-center space-x-6">
+          <button class="hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">person</span>
+          </button>
+          <button class="relative hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold"
+              >1</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto px-6 py-12">
+      <h1 class="font-display text-4xl text-slate-900 dark:text-white mb-10">
+        Your Shopping Bag
+      </h1>
+      <div class="flex flex-col lg:flex-row gap-12">
+        <div class="w-full lg:w-2/3">
+          <div class="border-t border-slate-100 dark:border-slate-800">
+            <div
+              class="py-8 border-b border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row gap-6"
+            >
+              <div
+                class="w-full sm:w-40 aspect-square overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shrink-0"
+              >
+                <img
+                  alt="Monogrammed Botanical Tumbler"
+                  class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuClnQ4UUhRAcj88KLEt0KzY--7Jhjp0E0hC9-V8I0aWXdwmsrRcoqjnSL9k6cX0IYHVliDD85bhI0JPaG_zYVvhOGJ0GE1VUx2IQGsy4NGPhSN0_aLw3dJ6uwxJ4czOKjyhU9Flf1eShZqapFWD40DDeV8qPLFrITJ10lUqpsFghQnEgnV6eiFt38cekiUOpT-UbSVTC-Xg-LuwK1YuFPtlwqyIj95NZkPtQwdjKMed6n20zzthW5GuTS_ueg0PYT7-XgrtcJkM2a8"
+                />
+              </div>
+              <div class="flex-1 flex flex-col justify-between">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3
+                      class="font-display text-xl text-slate-900 dark:text-white mb-1"
+                    >
+                      Monogrammed Botanical Tumbler
+                    </h3>
+                    <div class="space-y-1">
+                      <p
+                        class="text-xs text-slate-500 uppercase tracking-wider"
+                      >
+                        <span class="font-semibold text-primary">Style:</span>
+                        Classic Serif Monogram
+                      </p>
+                      <p
+                        class="text-xs text-slate-500 uppercase tracking-wider"
+                      >
+                        <span class="font-semibold text-primary">Text:</span>
+                        ABC
+                      </p>
+                      <p
+                        class="text-xs text-slate-500 uppercase tracking-wider flex items-center gap-1"
+                      >
+                        <span class="font-semibold text-primary">Icon:</span>
+                        <span class="material-symbols-outlined text-xs"
+                          >local_florist</span
+                        >
+                        Flower Icon
+                      </p>
+                    </div>
+                  </div>
+                  <p class="font-medium text-lg">$34.00</p>
+                </div>
+                <div class="flex items-center justify-between mt-6">
+                  <div
+                    class="flex items-center border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden"
+                  >
+                    <button
+                      class="px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-500 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-sm"
+                        >remove</span
+                      >
+                    </button>
+                    <span class="px-4 text-sm font-semibold">1</span>
+                    <button
+                      class="px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 text-primary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-sm">add</span>
+                    </button>
+                  </div>
+                  <button
+                    class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors flex items-center gap-1"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >delete</span
+                    >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 flex items-center text-sm text-slate-500">
+            <span class="material-symbols-outlined mr-2 text-primary"
+              >verified_user</span
+            >
+            Personalized items are non-refundable unless damaged during transit.
+          </div>
+        </div>
+        <div class="w-full lg:w-1/3">
+          <div
+            class="bg-slate-50 dark:bg-slate-900/50 rounded-3xl p-8 border border-slate-100 dark:border-slate-800 sticky top-32"
+          >
+            <h2 class="font-display text-2xl mb-6">Order Summary</h2>
+            <div
+              class="space-y-4 text-sm mb-6 pb-6 border-b border-slate-200 dark:border-slate-800"
+            >
+              <div class="flex justify-between">
+                <span class="text-slate-500">Subtotal</span>
+                <span class="font-medium">$34.00</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Estimated Shipping</span>
+                <span class="font-medium">$8.50</span>
+              </div>
+              <div class="flex justify-between text-primary">
+                <span class="font-medium">Discount</span>
+                <span class="font-medium">-$0.00</span>
+              </div>
+            </div>
+            <div class="mb-6">
+              <label
+                class="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-3"
+                >Promo Code</label
+              >
+              <div class="flex gap-2">
+                <input
+                  class="flex-1 border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 text-sm focus:ring-primary focus:border-primary px-4 py-2"
+                  placeholder="CHERRY10"
+                  type="text"
+                />
+                <button
+                  class="px-4 py-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-bold transition-colors"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between items-center mb-8">
+              <span class="font-display text-xl">Total</span>
+              <span class="font-display text-2xl text-primary font-bold"
+                >$42.50</span
+              >
+            </div>
+            <button
+              class="w-full bg-primary hover:bg-[#801628] text-white py-5 rounded-xl font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20 transition-all flex items-center justify-center space-x-3 mb-4"
+            >
+              <span>Proceed to Checkout</span>
+              <span class="material-symbols-outlined text-xl"
+                >arrow_forward</span
+              >
+            </button>
+            <div
+              class="flex justify-center items-center space-x-4 opacity-50 grayscale"
+            >
+              <div class="text-[10px] font-bold">VISA</div>
+              <div class="text-[10px] font-bold">AMEX</div>
+              <div class="text-[10px] font-bold">PAYPAL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="mt-24">
+        <h2 class="font-display text-3xl mb-8">You May Also Like</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[4/5] rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 mb-4 border border-slate-100 dark:border-slate-800 relative"
+            >
+              <img
+                alt="Personalized Mug"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuClnQ4UUhRAcj88KLEt0KzY--7Jhjp0E0hC9-V8I0aWXdwmsrRcoqjnSL9k6cX0IYHVliDD85bhI0JPaG_zYVvhOGJ0GE1VUx2IQGsy4NGPhSN0_aLw3dJ6uwxJ4czOKjyhU9Flf1eShZqapFWD40DDeV8qPLFrITJ10lUqpsFghQnEgnV6eiFt38cekiUOpT-UbSVTC-Xg-LuwK1YuFPtlwqyIj95NZkPtQwdjKMed6n20zzthW5GuTS_ueg0PYT7-XgrtcJkM2a8"
+              />
+              <button
+                class="absolute bottom-4 right-4 w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all"
+              >
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+            <h3
+              class="font-display text-lg mb-1 group-hover:text-primary transition-colors"
+            >
+              Elegant Script Mug
+            </h3>
+            <p class="text-sm text-slate-500">$22.00</p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[4/5] rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 mb-4 border border-slate-100 dark:border-slate-800 relative"
+            >
+              <img
+                alt="Custom Candle"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo0gfuURwCpZv9AWZbZOyJpahV4umTsXxlfL9MorlNCjM8PMzJMbedpwg5STeQKvVbtwqRyCtDQ2swo1nC4H_AmgXA2qgzFQC2jVwprdRXq2KWiP3qkTTJ2iTYGqWW2BOF2nvfo3sw8lyC_4NfsROgbENluT5O7ZIAEqv11-q23wH84MRKi9hHXL4L-8kXlH9plKqIx_pGG9lyD0dMbVDY2r3IKBzmoifWkRHWdIaB6cFnNMhUORksuRcvb4cHprbWhXlsTJvTkac"
+              />
+              <button
+                class="absolute bottom-4 right-4 w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all"
+              >
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+            <h3
+              class="font-display text-lg mb-1 group-hover:text-primary transition-colors"
+            >
+              Botanical Garden Candle
+            </h3>
+            <p class="text-sm text-slate-500">$28.00</p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[4/5] rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 mb-4 border border-slate-100 dark:border-slate-800 relative"
+            >
+              <img
+                alt="Etched Wine Glass"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgk9UnNpW2d_KqpZh61-49vNF4B_LhJylWdfdBi2wRmwNMJrI-_PwoEQUrpEUnhHIu9znGO1PWs1AIs45ALcyZMxN4xDK7C2ucFlqLTL6irTm4UTvETriEgFix8ZNW_vRLXJ-g6FP-Ar-R38GcpQbHpd6SZTjKBCLwkrQNPLpxAce0sAQ3NYdylyZfqv_S78PCv38gmMwEhXwvq_ATzSGnqJHL2GItJXeWBcFHDd_2pPp9btw8nSuBpyZHI3iVHyt2HzygC5401IU"
+              />
+              <button
+                class="absolute bottom-4 right-4 w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all"
+              >
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+            <h3
+              class="font-display text-lg mb-1 group-hover:text-primary transition-colors"
+            >
+              Classic Initial Wine Glass
+            </h3>
+            <p class="text-sm text-slate-500">$18.00</p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[4/5] rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 mb-4 border border-slate-100 dark:border-slate-800 relative"
+            >
+              <img
+                alt="Leather Notebook"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBggV5PRYe9omS59xEBdTxUGyZIoT-3XU9AgXGpkq876ZD3BwzapZbTC4R0iLk9rl0SdMnt7fTzhc-rA6fae3EmWN7I-lSMFAK_n8pZvm4KVUZSrNJsggwhgXTwLs977cvQSWPdZtxivUFte5RvScEzYqyH0BKzouUuINGvChrMbI6jsJdGqgq7Yzw2N46012aqtBiyCnhQuI48eV_8pqz8iAp85xyzuj1yd3m2KPnfwO72EeAHl8dyBwkj5Qh8Qs9lwtgBCTtik_Q"
+              />
+              <button
+                class="absolute bottom-4 right-4 w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all"
+              >
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+            <h3
+              class="font-display text-lg mb-1 group-hover:text-primary transition-colors"
+            >
+              Engraved Leather Journal
+            </h3>
+            <p class="text-sm text-slate-500">$32.00</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800 pt-20 pb-10 mt-20"
+    >
+      <div
+        class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center space-x-2 mb-6">
+            <div
+              class="w-8 h-8 bg-primary rounded-full flex items-center justify-center"
+            >
+              <span class="text-white font-display text-lg font-bold">C</span>
+            </div>
+            <span
+              class="font-display text-xl font-bold tracking-tight text-primary"
+              >CherryBoutique</span
+            >
+          </div>
+          <p
+            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6"
+          >
+            Premium custom gifts designed to capture life's most precious
+            moments. Handcrafted with care and delivered with love.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="material-symbols-outlined text-lg">public</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="material-symbols-outlined text-lg"
+                >photo_camera</span
+              ></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="material-symbols-outlined text-lg">mail</span></a
+            >
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-widest mb-6">
+            Customer Care
+          </h4>
+          <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Track Order</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Shipping Policy</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Returns &amp; Exchanges</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">FAQs</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-widest mb-6">
+            Our Company
+          </h4>
+          <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-widest mb-6">
+            Newsletter
+          </h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+            Join for 10% off your first gift.
+          </p>
+          <div class="flex">
+            <input
+              class="flex-1 bg-slate-50 dark:bg-slate-900 border-none rounded-l-lg text-sm px-4 focus:ring-1 focus:ring-primary"
+              placeholder="Email address"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-[#801628] transition-colors"
+            >
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container mx-auto px-6 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-sm text-slate-400"
+      >
+        © 2024 Elegant Cherry Boutique. All rights reserved. Built for beautiful
+        moments.
+      </div>
+    </footer>
+    <button
+      class="fixed bottom-6 left-6 z-50 p-3 bg-white dark:bg-slate-800 rounded-full shadow-xl border border-slate-100 dark:border-slate-700"
+      onclick="document.documentElement.classList.toggle('dark')"
+    >
+      <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+      <span class="material-symbols-outlined hidden dark:block text-yellow-400"
+        >light_mode</span
+      >
+    </button>
+  </body>
+</html>

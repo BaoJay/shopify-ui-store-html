@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Artisan Drinkware | Elegant Cherry Boutique</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#9B1B30", // Deep Cherry Red
+              "background-light": "#FFFFFF",
+              "background-dark": "#121212",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              xl: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .product-card:hover .quick-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300"
+  >
+    <div
+      class="bg-primary text-white py-2 text-center text-sm font-medium tracking-wide"
+    >
+      Get <span class="font-bold">10% OFF</span> when you add 2+ gifts. Free
+      Shipping on orders over $80.
+    </div>
+    <header
+      class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center"
+          >
+            <span class="text-white font-display text-2xl font-bold">C</span>
+          </div>
+          <span
+            class="font-display text-2xl font-bold tracking-tight text-primary"
+            >CherryBoutique</span
+          >
+        </div>
+        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+          <a class="hover:text-primary transition-colors" href="#">Occasions</a>
+          <a class="hover:text-primary transition-colors" href="#"
+            >Recipients</a
+          >
+          <a class="hover:text-primary transition-colors font-semibold" href="#"
+            >Drinkware</a
+          >
+          <a class="hover:text-primary transition-colors" href="#"
+            >New Arrivals</a
+          >
+        </nav>
+        <div class="flex items-center space-x-6">
+          <div class="relative hidden md:block">
+            <input
+              class="pl-10 pr-4 py-2 w-64 bg-slate-50 dark:bg-slate-900 border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20 transition-all"
+              placeholder="Find the perfect gift..."
+              type="text"
+            />
+            <span
+              class="material-symbols-outlined absolute left-3 top-2 text-slate-400 text-lg"
+              >search</span
+            >
+          </div>
+          <button class="hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">person</span>
+          </button>
+          <button class="relative hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold"
+              >3</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto px-6 py-8">
+      <nav
+        class="flex items-center space-x-2 text-xs text-slate-400 mb-6 uppercase tracking-widest"
+      >
+        <a class="hover:text-primary" href="#">Home</a>
+        <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+        <a class="hover:text-primary" href="#">Collections</a>
+        <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+        <span class="text-slate-600 dark:text-slate-300"
+          >Artisan Drinkware</span
+        >
+      </nav>
+      <div class="max-w-2xl mb-12">
+        <h1 class="font-display text-5xl mb-4 text-slate-900 dark:text-white">
+          Artisan Drinkware
+        </h1>
+        <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+          Elevate your daily rituals with our curated selection of customizable
+          glass tumblers and ceramic mugs. Each piece is designed for elegance
+          and crafted to last, making every sip a personal experience.
+        </p>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-12">
+        <aside class="w-full lg:w-64 space-y-10">
+          <div class="block lg:hidden mb-8">
+            <label
+              class="block text-xs font-bold uppercase tracking-widest mb-2"
+              >Sort By</label
+            >
+            <select
+              class="w-full border-slate-200 dark:border-slate-800 rounded-lg bg-transparent text-sm"
+            >
+              <option>Featured</option>
+              <option>Newest</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+          </div>
+          <div>
+            <h3
+              class="text-xs font-bold uppercase tracking-widest mb-4 border-b border-slate-100 dark:border-slate-800 pb-2"
+            >
+              Price Range
+            </h3>
+            <div class="space-y-3">
+              <label
+                class="flex items-center space-x-3 text-sm cursor-pointer group"
+              >
+                <input
+                  class="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                />
+                <span class="group-hover:text-primary transition-colors"
+                  >Under $25</span
+                >
+              </label>
+              <label
+                class="flex items-center space-x-3 text-sm cursor-pointer group"
+              >
+                <input
+                  class="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                />
+                <span class="group-hover:text-primary transition-colors"
+                  >$25 - $50</span
+                >
+              </label>
+              <label
+                class="flex items-center space-x-3 text-sm cursor-pointer group"
+              >
+                <input
+                  class="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                />
+                <span class="group-hover:text-primary transition-colors"
+                  >Over $50</span
+                >
+              </label>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="text-xs font-bold uppercase tracking-widest mb-4 border-b border-slate-100 dark:border-slate-800 pb-2"
+            >
+              Glass Type
+            </h3>
+            <div class="space-y-3">
+              <label
+                class="flex items-center space-x-3 text-sm cursor-pointer group"
+              >
+                <input
+                  class="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                />
+                <span class="group-hover:text-primary transition-colors"
+                  >Frosted Glass</span
+                >
+              </label>
+              <label
+                class="flex items-center space-x-3 text-sm cursor-pointer group"
+              >
+                <input
+                  class="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                />
+                <span class="group-hover:text-primary transition-colors"
+                  >Clear Crystal</span
+                >
+              </label>
+              <label
+                class="flex items-center space-x-3 text-sm cursor-pointer group"
+              >
+                <input
+                  class="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                />
+                <span class="group-hover:text-primary transition-colors"
+                  >Iridescent Finish</span
+                >
+              </label>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="text-xs font-bold uppercase tracking-widest mb-4 border-b border-slate-100 dark:border-slate-800 pb-2"
+            >
+              Occasion
+            </h3>
+            <div class="space-y-3">
+              <label
+                class="flex items-center space-x-3 text-sm cursor-pointer group"
+              >
+                <input
+                  class="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                />
+                <span class="group-hover:text-primary transition-colors"
+                  >Wedding &amp; Bridal</span
+                >
+              </label>
+              <label
+                class="flex items-center space-x-3 text-sm cursor-pointer group"
+              >
+                <input
+                  class="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                />
+                <span class="group-hover:text-primary transition-colors"
+                  >Birthday</span
+                >
+              </label>
+              <label
+                class="flex items-center space-x-3 text-sm cursor-pointer group"
+              >
+                <input
+                  class="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                />
+                <span class="group-hover:text-primary transition-colors"
+                  >Corporate Gifts</span
+                >
+              </label>
+            </div>
+          </div>
+        </aside>
+        <div class="flex-1">
+          <div class="flex justify-between items-center mb-8 hidden lg:flex">
+            <p class="text-sm text-slate-400">Showing 12 of 34 products</p>
+            <div class="flex items-center space-x-2">
+              <span
+                class="text-xs font-bold uppercase tracking-widest text-slate-500"
+                >Sort By:</span
+              >
+              <select
+                class="border-none bg-transparent text-sm focus:ring-0 font-medium cursor-pointer"
+              >
+                <option>Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Best Selling</option>
+              </select>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12"
+          >
+            <div class="product-card group relative">
+              <div
+                class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 mb-4"
+              >
+                <img
+                  alt="Monogrammed Glass Tumbler"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuClnQ4UUhRAcj88KLEt0KzY--7Jhjp0E0hC9-V8I0aWXdwmsrRcoqjnSL9k6cX0IYHVliDD85bhI0JPaG_zYVvhOGJ0GE1VUx2IQGsy4NGPhSN0_aLw3dJ6uwxJ4czOKjyhU9Flf1eShZqapFWD40DDeV8qPLFrITJ10lUqpsFghQnEgnV6eiFt38cekiUOpT-UbSVTC-Xg-LuwK1YuFPtlwqyIj95NZkPtQwdjKMed6n20zzthW5GuTS_ueg0PYT7-XgrtcJkM2a8"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-primary text-white text-[10px] px-3 py-1 rounded-full font-bold tracking-widest uppercase"
+                >
+                  Best Seller
+                </div>
+                <div
+                  class="quick-view absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 transition-all duration-300 translate-y-4"
+                >
+                  <button
+                    class="bg-white text-slate-900 px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase shadow-xl hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <h3
+                class="font-display text-xl mb-1 group-hover:text-primary transition-colors"
+              >
+                Monogrammed Botanical Tumbler
+              </h3>
+              <p class="text-slate-400 text-sm mb-2">Sustainable Bamboo Lid</p>
+              <p class="font-sans text-slate-900 dark:text-white font-light">
+                $34.00
+              </p>
+            </div>
+            <div class="product-card group relative">
+              <div
+                class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 mb-4"
+              >
+                <img
+                  alt="Personalized Ceramic Mug"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaI3fYwCHUc74cFvdUeYvmlpUmRB5FgEXWnwIE_n6T_jXAOabanELe0jVUFkcM4XnpHPpi5GCnb9CxfTduBqzm6KtulVJMYYdlshOw3DvMOlYHqNJNkDsqyp_vcojBjB3i1s84J_-il9IZMIpLRzEa2E4PkI696viUGTNjQ2VfKf_UMPNPog8Yze3VC7hRTXAwvch3HKD_rWMjF0BX-1Tn03m_zXP85dIK-qubxPXTBz5Vx40D5zlaLKZphpPW1F6UR1b4T6J7iiI"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-primary text-white text-[10px] px-3 py-1 rounded-full font-bold tracking-widest uppercase"
+                >
+                  New
+                </div>
+                <div
+                  class="quick-view absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 transition-all duration-300 translate-y-4"
+                >
+                  <button
+                    class="bg-white text-slate-900 px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase shadow-xl hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <h3
+                class="font-display text-xl mb-1 group-hover:text-primary transition-colors"
+              >
+                Minimalist Name Script Mug
+              </h3>
+              <p class="text-slate-400 text-sm mb-2">
+                Hand-pressed Matte Finish
+              </p>
+              <p class="font-sans text-slate-900 dark:text-white font-light">
+                $22.00
+              </p>
+            </div>
+            <div class="product-card group relative">
+              <div
+                class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 mb-4"
+              >
+                <img
+                  alt="Custom Frosted Glass"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo0gfuURwCpZv9AWZbZOyJpahV4umTsXxlfL9MorlNCjM8PMzJMbedpwg5STeQKvVbtwqRyCtDQ2swo1nC4H_AmgXA2qgzFQC2jVwprdRXq2KWiP3qkTTJ2iTYGqWW2BOF2nvfo3sw8lyC_4NfsROgbENluT5O7ZIAEqv11-q23wH84MRKi9hHXL4L-8kXlH9plKqIx_pGG9lyD0dMbVDY2r3IKBzmoifWkRHWdIaB6cFnNMhUORksuRcvb4cHprbWhXlsTJvTkac"
+                />
+                <div
+                  class="quick-view absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 transition-all duration-300 translate-y-4"
+                >
+                  <button
+                    class="bg-white text-slate-900 px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase shadow-xl hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <h3
+                class="font-display text-xl mb-1 group-hover:text-primary transition-colors"
+              >
+                Frosted Meadow Iced Coffee Glass
+              </h3>
+              <p class="text-slate-400 text-sm mb-2">Custom UV Printed</p>
+              <p class="font-sans text-slate-900 dark:text-white font-light">
+                $28.00
+              </p>
+            </div>
+            <div class="product-card group relative">
+              <div
+                class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 mb-4"
+              >
+                <img
+                  alt="Artisan Carafe"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgk9UnNpW2d_KqpZh61-49vNF4B_LhJylWdfdBi2wRmwNMJrI-_PwoEQUrpEUnhHIu9znGO1PWs1AIs45ALcyZMxN4xDK7C2ucFlqLTL6irTm4UTvETriEgFix8ZNW_vRLXJ-g6FP-Ar-R38GcpQbHpd6SZTjKBCLwkrQNPLpxAce0sAQ3NYdylyZfqv_S78PCv38gmMwEhXwvq_ATzSGnqJHL2GItJXeWBcFHDd_2pPp9btw8nSuBpyZHI3iVHyt2HzygC5401IU"
+                />
+                <div
+                  class="quick-view absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 transition-all duration-300 translate-y-4"
+                >
+                  <button
+                    class="bg-white text-slate-900 px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase shadow-xl hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <h3
+                class="font-display text-xl mb-1 group-hover:text-primary transition-colors"
+              >
+                Elegant Morning Carafe Set
+              </h3>
+              <p class="text-slate-400 text-sm mb-2">Engraved Oak Stopper</p>
+              <p class="font-sans text-slate-900 dark:text-white font-light">
+                $65.00
+              </p>
+            </div>
+            <div class="product-card group relative">
+              <div
+                class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 mb-4"
+              >
+                <img
+                  alt="Wine Glass"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBggV5PRYe9omS59xEBdTxUGyZIoT-3XU9AgXGpkq876ZD3BwzapZbTC4R0iLk9rl0SdMnt7fTzhc-rA6fae3EmWN7I-lSMFAK_n8pZvm4KVUZSrNJsggwhgXTwLs977cvQSWPdZtxivUFte5RvScEzYqyH0BKzouUuINGvChrMbI6jsJdGqgq7Yzw2N46012aqtBiyCnhQuI48eV_8pqz8iAp85xyzuj1yd3m2KPnfwO72EeAHl8dyBwkj5Qh8Qs9lwtgBCTtik_Q"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-primary text-white text-[10px] px-3 py-1 rounded-full font-bold tracking-widest uppercase"
+                >
+                  Best Seller
+                </div>
+                <div
+                  class="quick-view absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 transition-all duration-300 translate-y-4"
+                >
+                  <button
+                    class="bg-white text-slate-900 px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase shadow-xl hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <h3
+                class="font-display text-xl mb-1 group-hover:text-primary transition-colors"
+              >
+                Stemless 'Cheers' Gold Rimmed Glass
+              </h3>
+              <p class="text-slate-400 text-sm mb-2">
+                Custom Metallic Lettering
+              </p>
+              <p class="font-sans text-slate-900 dark:text-white font-light">
+                $18.00
+              </p>
+            </div>
+            <div class="product-card group relative">
+              <div
+                class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 mb-4"
+              >
+                <img
+                  alt="Travel Mug"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMLslzjBijcx8mVxJqHvGxYPbnJ9wLeTIybghEsq14rWE4MfnUxdxJtGYwvXwOy_Ft8dQMj_sAbXzrzeAjKwoYI2wWKtqaXihsI4TSyZYI5TSarHstben13yBUJp6FpvCj1tOmGjg3ONBo5jzDewx_7gsxMR_fU6uBPuZx58HpkEMMxj6YyxjIJlnPtbkv2Lb2pOqqBlPBeOtkmp4xE2roUbHLnpi1Kb_kxbwP5AanOA0aav9m62gUXPPePqERoJ3fk9ohu0ZYNI"
+                />
+                <div
+                  class="quick-view absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 transition-all duration-300 translate-y-4"
+                >
+                  <button
+                    class="bg-white text-slate-900 px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase shadow-xl hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <h3
+                class="font-display text-xl mb-1 group-hover:text-primary transition-colors"
+              >
+                Matte Ceramic Travel Tumbler
+              </h3>
+              <p class="text-slate-400 text-sm mb-2">
+                Silicone Spill-proof Lid
+              </p>
+              <p class="font-sans text-slate-900 dark:text-white font-light">
+                $29.00
+              </p>
+            </div>
+          </div>
+          <div class="mt-20 flex justify-center items-center space-x-4">
+            <button
+              class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all"
+            >
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <span class="text-sm font-medium">Page 1 of 3</span>
+            <button
+              class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all"
+            >
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800 pt-20 pb-10 mt-20"
+    >
+      <div
+        class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center space-x-2 mb-6">
+            <div
+              class="w-8 h-8 bg-primary rounded-full flex items-center justify-center"
+            >
+              <span class="text-white font-display text-lg font-bold">C</span>
+            </div>
+            <span
+              class="font-display text-xl font-bold tracking-tight text-primary"
+              >CherryBoutique</span
+            >
+          </div>
+          <p
+            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6"
+          >
+            Premium custom gifts designed to capture life's most precious
+            moments. Handcrafted with care and delivered with love.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="material-symbols-outlined text-lg">public</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="material-symbols-outlined text-lg"
+                >photo_camera</span
+              ></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="material-symbols-outlined text-lg">mail</span></a
+            >
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-widest mb-6">
+            Customer Care
+          </h4>
+          <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Track Order</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Shipping Policy</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Returns &amp; Exchanges</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">FAQs</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-widest mb-6">
+            Our Company
+          </h4>
+          <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-widest mb-6">
+            Payment Methods
+          </h4>
+          <div class="grid grid-cols-4 gap-2 opacity-60">
+            <div
+              class="bg-slate-100 dark:bg-slate-800 h-8 rounded flex items-center justify-center text-[10px] font-bold"
+            >
+              VISA
+            </div>
+            <div
+              class="bg-slate-100 dark:bg-slate-800 h-8 rounded flex items-center justify-center text-[10px] font-bold"
+            >
+              AMEX
+            </div>
+            <div
+              class="bg-slate-100 dark:bg-slate-800 h-8 rounded flex items-center justify-center text-[10px] font-bold"
+            >
+              PAYP
+            </div>
+            <div
+              class="bg-slate-100 dark:bg-slate-800 h-8 rounded flex items-center justify-center text-[10px] font-bold"
+            >
+              MAST
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container mx-auto px-6 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-sm text-slate-400"
+      >
+        © 2024 Elegant Cherry Boutique. All rights reserved. Built for beautiful
+        moments.
+      </div>
+    </footer>
+    <div class="fixed bottom-6 right-6 z-50">
+      <button
+        class="bg-primary text-white p-4 rounded-full shadow-2xl flex items-center space-x-2 hover:scale-110 transition-transform"
+      >
+        <span class="material-symbols-outlined">chat_bubble</span>
+        <span class="font-medium pr-2">Chat with us</span>
+      </button>
+    </div>
+    <button
+      class="fixed bottom-6 left-6 z-50 p-3 bg-white dark:bg-slate-800 rounded-full shadow-xl border border-slate-100 dark:border-slate-700"
+      onclick="document.documentElement.classList.toggle('dark')"
+    >
+      <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+      <span class="material-symbols-outlined hidden dark:block text-yellow-400"
+        >light_mode</span
+      >
+    </button>
+  </body>
+</html>
