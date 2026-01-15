@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tropical Pet Paradise - Island Vibes for You &amp; Your Pet</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "island-turquoise": "#00ced1",
+              "sunny-yellow": "#ffed4a",
+              "tropical-lime": "#32cd32",
+              "hot-pink": "#ff1493",
+              "ocean-blue": "#0077be",
+              "sand-light": "#fdf5e6",
+              "primary-text": "#1a2a2a",
+            },
+            fontFamily: {
+              heading: ["Comfortaa", "sans-serif"],
+              body: ["Nunito", "sans-serif"],
+            },
+            borderRadius: {
+              scrapbook: "1.5rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply font-body bg-sand-light text-primary-text;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          @apply font-heading font-bold;
+        }
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        height: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 20px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #ff1493;
+        border-radius: 20px;
+        border: 3px solid #f1f1f1;
+      }
+      .polaroid-shadow {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06),
+          0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      .sticky-note {
+        box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.05);
+        transform: rotate(-1deg);
+      }
+      .scrapbook-tape {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(2px);
+        width: 80px;
+        height: 25px;
+      }
+    </style>
+  </head>
+  <body class="selection:bg-hot-pink selection:text-white">
+    <div class="w-full bg-island-turquoise py-3 px-4 text-center">
+      <p class="text-white font-black text-sm md:text-base tracking-wide">
+        🌺 Summer Splash Sale! 🌊 20% Off All Beach &amp; Pool Gear! Code:
+        <span class="underline decoration-white">SURFPUPS</span>
+      </p>
+    </div>
+    <header class="sticky top-0 z-50">
+      <div
+        class="bg-white/90 backdrop-blur-md border-b border-island-turquoise/20 px-4 md:px-10 py-4"
+      >
+        <div
+          class="max-w-[1300px] mx-auto flex items-center justify-between gap-6"
+        >
+          <div class="flex items-center gap-3 shrink-0">
+            <div
+              class="bg-hot-pink p-2 rounded-full flex items-center justify-center transform hover:rotate-12 transition-transform"
+            >
+              <span class="material-symbols-outlined text-white text-2xl"
+                >beach_access</span
+              >
+            </div>
+            <h2
+              class="text-2xl font-black tracking-tight text-primary-text uppercase"
+            >
+              ISLANDPAW
+            </h2>
+          </div>
+          <div class="flex-1 max-w-xl">
+            <div class="relative group">
+              <div
+                class="absolute inset-y-0 left-4 flex items-center pointer-events-none"
+              >
+                <span class="material-symbols-outlined text-island-turquoise"
+                  >search</span
+                >
+              </div>
+              <input
+                class="w-full h-12 bg-island-turquoise/10 border-2 border-transparent rounded-full pl-12 pr-6 focus:ring-0 focus:border-hot-pink transition-all placeholder:text-gray-500 font-bold"
+                placeholder="Search for snorkel gear &amp; tiki treats..."
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-sunny-yellow transition-colors"
+            >
+              <span class="material-symbols-outlined text-hot-pink"
+                >favorite</span
+              >
+            </button>
+            <button
+              class="w-11 h-11 flex items-center justify-center rounded-full bg-sunny-yellow relative group"
+            >
+              <span class="material-symbols-outlined">shopping_cart</span>
+              <span
+                class="absolute -top-1 -right-1 bg-hot-pink text-white text-[10px] font-bold h-5 w-5 rounded-full flex items-center justify-center border-2 border-white"
+                >2</span
+              >
+            </button>
+            <div
+              class="h-11 w-11 rounded-full border-2 border-hot-pink overflow-hidden rotate-3 hover:rotate-0 transition-transform"
+            >
+              <img
+                alt="Profile"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-fZE_146HeDNuPx8w2Bknd2XSG_nhCOhx-ejLj6SNMG5lZPmzu_5NLN2EqlHmd_7LUU_AoT6o9nY-rw_L7zCiQTQ4VX-nIu3hqLQeDQ8IWbr6MkmMGfkn26Ly97xTIPkdBYpU6G5De2dNsDA2nDAAHAdx8DTMe5wHd5JL9dXGA10b326Hwx8ZgDxKSqvOtcCMrwfOMIaLZMpQ3rdhFce6ixOOxIGM9lsKno0BtfYp2PDJ5rfA14GbYQ_0iGi32cS9H1jU48Ioo_o"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="bg-sunny-yellow border-b border-island-turquoise/10">
+        <div class="max-w-[1300px] mx-auto px-4">
+          <ul
+            class="flex items-center justify-center gap-4 md:gap-10 py-3 overflow-x-auto no-scrollbar whitespace-nowrap"
+          >
+            <li>
+              <a
+                class="text-sm md:text-base font-black text-primary-text hover:text-hot-pink transition-colors"
+                href="#"
+                >Beach Buddies</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-sm md:text-base font-black text-primary-text hover:text-hot-pink transition-colors"
+                href="#"
+                >Island Essentials</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-sm md:text-base font-black text-primary-text hover:text-hot-pink transition-colors"
+                href="#"
+                >Custom Getaways</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-sm md:text-base font-black text-primary-text hover:text-hot-pink transition-colors"
+                href="#"
+                >Paw-ty Supplies</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-sm md:text-base font-black text-primary-text hover:text-hot-pink transition-colors"
+                href="#"
+                >Community Boardwalk</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-sm md:text-base font-black text-primary-text hover:text-hot-pink transition-colors"
+                href="#"
+                >Help Hut</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="relative px-4 py-16 md:py-24 bg-island-turquoise/20 overflow-hidden"
+      >
+        <div
+          class="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
+          <div class="relative z-10 space-y-8 text-center lg:text-left">
+            <div
+              class="inline-block bg-white/60 backdrop-blur px-4 py-2 rounded-full text-sm font-bold border-2 border-dashed border-hot-pink/30"
+            >
+              <span class="material-symbols-outlined align-middle text-sm mr-1"
+                >sunny</span
+              >
+              NEW TROPICAL ARRIVALS ARE HERE!
+            </div>
+            <h1
+              class="text-5xl md:text-7xl font-black text-primary-text leading-[1] relative"
+            >
+              Catch The <br />
+              <span class="relative">
+                Island Vibes!
+                <svg
+                  class="absolute -bottom-2 left-0 w-full"
+                  height="10"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 100 10"
+                >
+                  <path
+                    d="M0 5 Q 25 0, 50 5 T 100 5"
+                    fill="transparent"
+                    stroke="#ff1493"
+                    stroke-width="4"
+                  ></path>
+                </svg>
+              </span>
+            </h1>
+            <p
+              class="text-xl md:text-2xl font-medium max-w-lg mx-auto lg:mx-0 text-primary-text/80 leading-relaxed"
+            >
+              Unleash the aloha spirit! Vibrant, sun-soaked gear for sandy paws
+              and salty hair. From neon life vests to palm-printed bandanas.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-4"
+            >
+              <button
+                class="bg-hot-pink text-white px-10 py-5 rounded-full font-black text-lg shadow-[0_8px_0_#c71585] hover:translate-y-1 hover:shadow-[0_4px_0_#c71585] transition-all active:translate-y-2 active:shadow-none"
+              >
+                Grab Beach Bundles
+              </button>
+              <button
+                class="bg-white border-4 border-sunny-yellow px-10 py-5 rounded-full font-black text-lg hover:bg-sunny-yellow/30 transition-all"
+              >
+                Explore the Island
+              </button>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="relative z-20 transform -rotate-2 hover:rotate-0 transition-transform duration-500"
+            >
+              <div
+                class="bg-white p-4 pb-16 polaroid-shadow rounded-sm max-w-md mx-auto lg:ml-auto"
+              >
+                <img
+                  alt="Hero Image"
+                  class="w-full aspect-square object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNMmkd-I65auH_7ZdDF4X2sasn2YyGq8q2acxpkmrpZzfCLZlZoIrcQpzmJn7qDjyQ_lmZ4X71c65TFc8WPPPHFN2QMA_fqBdeVXLOu8z-RkSXHjJnrJe1SvCiojGOoAEt9Em_wQ7McE4X_ullOtyqZKU4EMan4mlz3t2sDt4iRn7i-wrTYzwOxoWD5GNXIVGdOIHKlX4LZJSz-F-LqEW1IhZ0sLbzbXhQ2rxLkaAJtup2EQgq8v3Z2tUSWI2edRmonA54GtshmRM"
+                />
+              </div>
+              <div
+                class="absolute -bottom-8 -left-8 bg-sunny-yellow sticky-note p-6 rounded-sm w-48 text-center border-b-2 border-r-2 border-black/5"
+              >
+                <p class="font-black text-3xl text-hot-pink leading-none">
+                  ALOHA!
+                </p>
+                <p
+                  class="text-xs font-bold mt-1 text-gray-600 uppercase tracking-tighter"
+                >
+                  GET 20% OFF TODAY
+                </p>
+              </div>
+              <div
+                class="scrapbook-tape absolute -top-4 left-1/2 -translate-x-1/2 rotate-12 z-30"
+              ></div>
+            </div>
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border-4 border-island-turquoise/10 rounded-full border-dashed -z-0"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 px-4 bg-white relative">
+        <div class="max-w-[1300px] mx-auto">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between mb-16 gap-6"
+          >
+            <h2 class="text-4xl font-black text-center md:text-left">
+              Pick Your Island Pack
+            </h2>
+            <a
+              class="text-lg font-bold text-hot-pink border-b-4 border-hot-pink/30 hover:border-hot-pink transition-all"
+              href="#"
+              >See All Tropical Tribes</a
+            >
+          </div>
+          <div class="flex flex-wrap justify-center gap-10 md:gap-16">
+            <a class="group text-center" href="#">
+              <div
+                class="w-32 h-32 md:w-44 md:h-44 bg-sunny-yellow rounded-full flex items-center justify-center border-4 border-transparent group-hover:border-hot-pink group-hover:rotate-6 transition-all shadow-lg overflow-hidden relative"
+              >
+                <span
+                  class="material-symbols-outlined text-6xl text-hot-pink group-hover:scale-125 transition-transform"
+                  >pets</span
+                >
+              </div>
+              <span class="block mt-6 text-xl font-black">Beach Hounds</span>
+            </a>
+            <a class="group text-center" href="#">
+              <div
+                class="w-32 h-32 md:w-44 md:h-44 bg-island-turquoise rounded-full flex items-center justify-center border-4 border-transparent group-hover:border-hot-pink group-hover:-rotate-6 transition-all shadow-lg overflow-hidden"
+              >
+                <span
+                  class="material-symbols-outlined text-6xl text-white group-hover:scale-125 transition-transform"
+                  >pets</span
+                >
+              </div>
+              <span class="block mt-6 text-xl font-black">Island Cats</span>
+            </a>
+            <a class="group text-center" href="#">
+              <div
+                class="w-32 h-32 md:w-44 md:h-44 bg-tropical-lime rounded-full flex items-center justify-center border-4 border-transparent group-hover:border-hot-pink group-hover:rotate-12 transition-all shadow-lg overflow-hidden"
+              >
+                <span
+                  class="material-symbols-outlined text-6xl text-white group-hover:scale-125 transition-transform"
+                  >flutter_dash</span
+                >
+              </div>
+              <span class="block mt-6 text-xl font-black">Tropical Birds</span>
+            </a>
+            <a class="group text-center" href="#">
+              <div
+                class="w-32 h-32 md:w-44 md:h-44 bg-sunny-yellow rounded-full flex items-center justify-center border-4 border-transparent group-hover:border-hot-pink group-hover:-rotate-12 transition-all shadow-lg overflow-hidden"
+              >
+                <span
+                  class="material-symbols-outlined text-6xl text-hot-pink group-hover:scale-125 transition-transform"
+                  >pets</span
+                >
+              </div>
+              <span class="block mt-6 text-xl font-black">Sand Reptiles</span>
+            </a>
+            <a class="group text-center" href="#">
+              <div
+                class="w-32 h-32 md:w-44 md:h-44 bg-island-turquoise rounded-full flex items-center justify-center border-4 border-transparent group-hover:border-hot-pink group-hover:rotate-3 transition-all shadow-lg overflow-hidden"
+              >
+                <span
+                  class="material-symbols-outlined text-6xl text-white group-hover:scale-125 transition-transform"
+                  >water_drop</span
+                >
+              </div>
+              <span class="block mt-6 text-xl font-black">Deep Sea Fish</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 px-4 bg-sunny-yellow/20">
+        <div class="max-w-[1300px] mx-auto">
+          <div class="flex items-end justify-between mb-16">
+            <div>
+              <span
+                class="bg-hot-pink text-white px-3 py-1 rounded text-xs font-black tracking-widest uppercase mb-4 inline-block"
+                >HOT ON THE SHORE</span
+              >
+              <h2 class="text-4xl md:text-5xl font-black">
+                Trending Island Gear
+              </h2>
+            </div>
+            <div class="hidden md:flex gap-4">
+              <button
+                class="w-14 h-14 rounded-full bg-white border-2 border-hot-pink flex items-center justify-center hover:bg-hot-pink hover:text-white transition-all"
+              >
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+              <button
+                class="w-14 h-14 rounded-full bg-white border-2 border-hot-pink flex items-center justify-center hover:bg-hot-pink hover:text-white transition-all"
+              >
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex gap-10 overflow-x-auto pb-12 custom-scrollbar px-4 pt-4"
+          >
+            <div
+              class="min-w-[320px] bg-white p-4 pb-12 polaroid-shadow transform rotate-2 hover:rotate-0 transition-all duration-300"
+            >
+              <div class="relative mb-6">
+                <img
+                  alt="Product"
+                  class="w-full aspect-square object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlqbHEdsMTxBEOpX27krL7NwXQrhkROMLNDe61sEVro1knyU7qq6nW5IgYu3fFxaM07JH7Va_A4vyovq8dnsCfiCfoxFRoIFWQoKfmG2y50W8eF6PLmN4_IrH3pIxSMIAo56dYbjB2tNvz9cK48VCBFKs3ZDLwF1tvbmWW0bPlOFnesoqh1kowxu__xgdHmu3Fpi8qOlH69Pxz2fiG0RDxMRNDtJQ5Jcvs3SEehNflQztpH-vgAPqrWrSIF2Pwi8ac2LyybDgs6q8"
+                />
+                <div class="absolute top-2 right-2 flex gap-1">
+                  <span
+                    class="bg-white/80 backdrop-blur p-2 rounded-full shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-hot-pink fill-1"
+                      >star</span
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="px-2">
+                <h3 class="text-2xl font-black leading-tight mb-2">
+                  Zig-Zag Surf Set
+                </h3>
+                <p class="text-gray-500 font-bold mb-4">
+                  Board-ready Bandana + Socks
+                </p>
+                <div class="flex items-center justify-between mt-6">
+                  <span class="text-2xl font-black text-hot-pink">$34.99</span>
+                  <button
+                    class="bg-hot-pink text-white p-3 rounded-full hover:scale-110 transition-transform shadow-lg"
+                  >
+                    <span class="material-symbols-outlined"
+                      >add_shopping_cart</span
+                    >
+                  </button>
+                </div>
+                <div
+                  class="mt-4 pt-4 border-t border-dashed border-gray-200 text-xs font-bold text-gray-400"
+                >
+                  "Perfect for beach day! ⭐⭐⭐⭐⭐"
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[320px] bg-white p-4 pb-12 polaroid-shadow transform -rotate-1 hover:rotate-0 transition-all duration-300"
+            >
+              <div class="relative mb-6">
+                <img
+                  alt="Product"
+                  class="w-full aspect-square object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJzeJbqkrqT6cXrXmu0XLM9toNtJGet_6JuEmtxgTNHRgu85wdpppDHrrFs6DKThR1CFKuxQARcvg4M4F_qzPivoLtHL8Xqsf7awGR94-NoXkBR3qB3uQVrJBDcMlvL9En47dtZeoEAGzDHkg38VUsUXDtV4OOkL9f_hcPeGWpDm7rDhBD13tKawal2Vsk3Hkcl6ATw4HvkjkWWKhSlChywjW6WuFe9Kjv7A80rkOihm0MCd2VZk_C5-HrKfMyf79QuwOy3cfwCmk"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-tropical-lime text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest"
+                  >ISLAND TOP PICK</span
+                >
+              </div>
+              <div class="px-2">
+                <h3 class="text-2xl font-black leading-tight mb-2">
+                  Tropical Portrait Hoodie
+                </h3>
+                <p class="text-gray-500 font-bold mb-4">
+                  Breezy Organic Cotton
+                </p>
+                <div class="flex items-center justify-between mt-6">
+                  <span class="text-2xl font-black text-hot-pink">$65.00</span>
+                  <button
+                    class="bg-hot-pink text-white p-3 rounded-full hover:scale-110 transition-transform shadow-lg"
+                  >
+                    <span class="material-symbols-outlined"
+                      >add_shopping_cart</span
+                    >
+                  </button>
+                </div>
+                <div
+                  class="mt-4 pt-4 border-t border-dashed border-gray-200 text-xs font-bold text-gray-400"
+                >
+                  "Ready for the luau! 😻"
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[320px] bg-white p-4 pb-12 polaroid-shadow transform rotate-3 hover:rotate-0 transition-all duration-300"
+            >
+              <div class="relative mb-6">
+                <img
+                  alt="Product"
+                  class="w-full aspect-square object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA86bFGxtXrYQr6nXUPNRZ-oaDSa1e2XAPGsw9NOPCsNQsNSBENSkAM3A_uHQ4HSL-qZ7n-HyaITnDfiTZfeuV6xfKbrdjU3lJOtxPMVKaF9bjLmUDzP821tbHNCw715CQCTn3nwZodMWYQxC3r-OWN_MMdUeRP4DY10fIrLAha4hgYPxhrqVg5xPr7CM_Fnsxt2Xzr7LROOeXddFt5Ug2-2bCb58HP2FvzxotUNAEk3fUMcd8Pc8GXAKh3FENyNk8gA2tDmG6Gj24"
+                />
+              </div>
+              <div class="px-2">
+                <h3 class="text-2xl font-black leading-tight mb-2">
+                  Sea Shell Dining Bowl
+                </h3>
+                <p class="text-gray-500 font-bold mb-4">Heavyweight Ceramic</p>
+                <div class="flex items-center justify-between mt-6">
+                  <span class="text-2xl font-black text-hot-pink">$28.50</span>
+                  <button
+                    class="bg-hot-pink text-white p-3 rounded-full hover:scale-110 transition-transform shadow-lg"
+                  >
+                    <span class="material-symbols-outlined"
+                      >add_shopping_cart</span
+                    >
+                  </button>
+                </div>
+                <div
+                  class="mt-4 pt-4 border-t border-dashed border-gray-200 text-xs font-bold text-gray-400"
+                >
+                  "Feels like beach luxury 🐚"
+                </div>
+              </div>
+            </div>
+            <div
+              class="min-w-[320px] bg-white p-4 pb-12 polaroid-shadow transform -rotate-3 hover:rotate-0 transition-all duration-300"
+            >
+              <div class="relative mb-6">
+                <img
+                  alt="Product"
+                  class="w-full aspect-square object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDquXuEMMVI7uknEYyzXyFwAnw3v6Gb_12jWiXapPatNa_ozvh1ANnbzPIg3Lo8yC54TR4eyLwZPkJD5r59A1il-OVp0FSubgNwHaE7W3faIjB2k1UcFCkIBc575UFbslBXczbzL8kQtFvhnhHD7cLOzAPLcyWEKx099ZD4mNHJeTsbJ0yx03ROMv_-gUbpkB4zloqXW7MDyOTBtCq42SHEP9lnDrXnG_qyaKxufPjixzlOhMKBAmOaKrRQ7XuCGOqpZhpptf_pTjk"
+                />
+              </div>
+              <div class="px-2">
+                <h3 class="text-2xl font-black leading-tight mb-2">
+                  Neon Tide Leash
+                </h3>
+                <p class="text-gray-500 font-bold mb-4">
+                  Glow-in-the-dark Walks
+                </p>
+                <div class="flex items-center justify-between mt-6">
+                  <span class="text-2xl font-black text-hot-pink">$42.00</span>
+                  <button
+                    class="bg-hot-pink text-white p-3 rounded-full hover:scale-110 transition-transform shadow-lg"
+                  >
+                    <span class="material-symbols-outlined"
+                      >add_shopping_cart</span
+                    >
+                  </button>
+                </div>
+                <div
+                  class="mt-4 pt-4 border-t border-dashed border-gray-200 text-xs font-bold text-gray-400"
+                >
+                  "Sunset walk essential! ✨"
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 px-4 bg-island-turquoise overflow-hidden relative">
+        <div
+          class="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="max-w-[800px] mx-auto text-center relative z-10 bg-white/10 backdrop-blur-md p-12 rounded-[3rem] border-4 border-white/20"
+        >
+          <span class="material-symbols-outlined text-7xl text-white mb-8"
+            >sailing</span
+          >
+          <h2
+            class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight"
+          >
+            Join Our Island Ohana
+          </h2>
+          <p class="text-white/90 text-xl mb-12 max-w-xl mx-auto font-medium">
+            Get 15% off your first tropical treasure, plus early access to our
+            seasonal "Beach Party" drops.
+          </p>
+          <form
+            class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto bg-white p-2 rounded-full shadow-2xl"
+          >
+            <input
+              class="flex-1 bg-transparent px-8 py-4 rounded-full border-none focus:ring-0 text-primary-text font-bold placeholder:text-gray-400"
+              placeholder="Your name &amp; island mail"
+              type="email"
+            />
+            <button
+              class="bg-hot-pink text-white px-10 py-4 rounded-full font-black hover:bg-primary-text transition-colors shadow-lg"
+              type="submit"
+            >
+              SET SAIL
+            </button>
+          </form>
+          <p class="text-white/70 text-sm mt-8 font-bold italic">
+            By joining, you'll receive sunny updates and secret tropical snack
+            recipes.
+          </p>
+        </div>
+      </section>
+      <section class="py-24 px-4 bg-white">
+        <div
+          class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16"
+        >
+          <div class="flex flex-col items-center text-center group">
+            <div
+              class="w-24 h-24 bg-island-turquoise/20 rounded-[2rem] flex items-center justify-center group-hover:rotate-12 transition-transform shadow-md border-2 border-transparent hover:border-hot-pink"
+            >
+              <span class="material-symbols-outlined text-4xl text-hot-pink"
+                >sailing</span
+              >
+            </div>
+            <h4 class="text-2xl font-black mt-8 mb-4">Fast Boat Shipping</h4>
+            <p class="text-gray-500 text-lg leading-relaxed">
+              Catching the tide to your door. Free over $50!
+            </p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div
+              class="w-24 h-24 bg-sunny-yellow/20 rounded-[2rem] flex items-center justify-center group-hover:-rotate-12 transition-transform shadow-md border-2 border-transparent hover:border-hot-pink"
+            >
+              <span class="material-symbols-outlined text-4xl text-hot-pink"
+                >palm_logo</span
+              >
+            </div>
+            <h4 class="text-2xl font-black mt-8 mb-4">Eco-Island Materials</h4>
+            <p class="text-gray-500 text-lg leading-relaxed">
+              Saving the coral reefs, one matching set at a time.
+            </p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div
+              class="w-24 h-24 bg-tropical-lime/20 rounded-[2rem] flex items-center justify-center group-hover:rotate-6 transition-transform shadow-md border-2 border-transparent hover:border-hot-pink"
+            >
+              <span class="material-symbols-outlined text-4xl text-hot-pink"
+                >volunteer_activism</span
+              >
+            </div>
+            <h4 class="text-2xl font-black mt-8 mb-4">
+              Approved &amp; Donated
+            </h4>
+            <p class="text-gray-500 text-lg leading-relaxed">
+              5% of every sale goes to beach cleanup and sea turtle rescues.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 px-4 bg-sand-light">
+        <div class="max-w-[1300px] mx-auto">
+          <div class="text-center mb-16 relative">
+            <h2
+              class="text-4xl md:text-5xl font-black tracking-tight inline-block relative"
+            >
+              Life's A Beach
+              <div
+                class="absolute -right-12 -top-8 w-16 h-16 bg-sunny-yellow sticky-note flex items-center justify-center rounded-sm rotate-12"
+              >
+                <span class="material-symbols-outlined text-hot-pink"
+                  >camera_alt</span
+                >
+              </div>
+            </h2>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div
+              class="bg-white p-3 pb-10 polaroid-shadow transform rotate-1 hover:rotate-0 transition-all duration-300"
+            >
+              <div
+                class="scrapbook-tape absolute -top-2 left-1/2 -translate-x-1/2 -rotate-3 z-10"
+              ></div>
+              <img
+                alt="User Post"
+                class="w-full aspect-square object-cover mb-4"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtHbdHtFgahVK-dcWppvJGoiQ7QftqDM_vYcS85CedMhMRdIQYgadQEQJ4wtQJu3kW4iLI4dgn3TejQs8iDc7aRs72KS7SM_qYd3t3C9_4Xw-99pq0jiyqhgLy5ooFlbw77rWa3Kb3b7m8-yJ-DjgMnmc-0XIYS05TAc6YLAV4KGd_YytD-s5GRXZUQ1Ul123TZrjTB0VB2za-jY7E9m9-hv1TATwjN5NCDIWABGQhOCk5SFGwxLHETCBa4Iaf6O8SJbY7rbvyzAQ"
+              />
+            </div>
+            <div
+              class="bg-white p-3 pb-10 polaroid-shadow transform -rotate-2 hover:rotate-0 transition-all duration-300 translate-y-4"
+            >
+              <div
+                class="scrapbook-tape absolute -top-2 left-1/2 -translate-x-1/2 rotate-12 z-10"
+              ></div>
+              <img
+                alt="User Post"
+                class="w-full aspect-square object-cover mb-4"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMn2T3W4hgNJs_dkzI8xkTVPZNh5wHhjx_XqoEMtwprDQtkT8_dLJ9zs_rOOE1fquHLRGdnrvPcT0PLxcAFlWTZ_yrl0hWz9HiqJFBJqPVgt8EZVzWQ4yYbI4Ngl8bFa1cjq_YC7CwOxt1MVGgjJP4I9Eg2h-AulDkwQjyk1TVzTSJcglmxQnjmbTfzQpLQ8p1dlddRzrTqv-vq2OYe7X0so8yxLuX-brnhGiD90qNfUy2bFhBJ7DLf8jz2dXUDK46wyo4OpZH28U"
+              />
+            </div>
+            <div
+              class="bg-white p-3 pb-10 polaroid-shadow transform rotate-3 hover:rotate-0 transition-all duration-300"
+            >
+              <div
+                class="scrapbook-tape absolute -top-2 left-1/2 -translate-x-1/2 -rotate-12 z-10"
+              ></div>
+              <img
+                alt="User Post"
+                class="w-full aspect-square object-cover mb-4"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPdfZn0LEgEXpxZ0SJu-nTO6QzBpT4beOjTFu-sYp6IaM9UpNM81zocgxxnNLlrr50FZeeP7uUkMSlUSImsaYm5SWw7UJqIzVsiESxY1l4wm4ao2l1IjD-jJO8d85SWar9HKR4QBrMICjrixtb6jaR6E4O7qv9p_kkgJ4gao38j-zwSlwRQoUNzGjini3oagqWDpF2XCvujhrm8nbjPfgfcYFNzvkQy8VvYCD22PmCRjluXFL0rTg0iLopdaf13l0JDd8tMEBiXqk"
+              />
+            </div>
+            <div
+              class="bg-white p-3 pb-10 polaroid-shadow transform -rotate-1 hover:rotate-0 transition-all duration-300 translate-y-6"
+            >
+              <div
+                class="scrapbook-tape absolute -top-2 left-1/2 -translate-x-1/2 rotate-6 z-10"
+              ></div>
+              <img
+                alt="User Post"
+                class="w-full aspect-square object-cover mb-4"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXB6ohWTKO0bOtVzXNZXBoLpWrPD9rQeP-I52sUGMoFswgi2CeuYqTpZJb-Zhxpz2W5l6TdbUFobv9yi17_sKiq_-tCu_a-7nfAxM0wzEQNOwPg0Swgbf-qGW3Dns63NIRNppICwgVYCfOBpa1eE8sbnKlPWTmMqx7nLuPerSWk7QmvDEGC8DUH8xA878i5Wu1ZRucqiFQfO8AwiGqn2W3XT4lOGICA60OxamI0QGkSkP3WC2NPMPyJjIommrBSHd--M5iaLfp0_g"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-primary-text text-white pt-24 pb-12 px-6 overflow-hidden relative"
+    >
+      <div class="max-w-[1300px] mx-auto relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+          <div class="col-span-1 md:col-span-1 space-y-8">
+            <div class="flex items-center gap-3">
+              <div class="bg-hot-pink p-2 rounded-full transform rotate-12">
+                <span class="material-symbols-outlined text-white text-xl"
+                  >beach_access</span
+                >
+              </div>
+              <h2 class="text-2xl font-black tracking-tight">ISLANDPAW</h2>
+            </div>
+            <p class="text-white/60 font-medium text-lg leading-relaxed">
+              Spreading tropical vibes and salty kisses for pets and their
+              beach-loving humans since 2024.
+            </p>
+            <div class="flex gap-4">
+              <a
+                class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-hot-pink transition-all"
+                href="#"
+              >
+                <span class="material-symbols-outlined">alternate_email</span>
+              </a>
+              <a
+                class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-hot-pink transition-all"
+                href="#"
+              >
+                <span class="material-symbols-outlined">public</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h5 class="font-black text-xl mb-8 text-sunny-yellow">
+              Island Shop
+            </h5>
+            <ul class="space-y-4 text-lg text-white/60">
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Island Bestsellers</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >New Surf Gear</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Luau Matching Sets</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Gift Sand-Dollars</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-black text-xl mb-8 text-sunny-yellow">
+              Dock Support
+            </h5>
+            <ul class="space-y-4 text-lg text-white/60">
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Track Boat Order</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Easy Tide Returns</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Port Info</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Fin &amp; Fur Size Guide</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-black text-xl mb-8 text-sunny-yellow">
+              Island Help
+            </h5>
+            <ul class="space-y-4 text-lg text-white/60">
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Island FAQs</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Contact the Hut</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Coconut Privacy</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Terms of the Shore</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-12 border-t border-white/10 text-center text-white/40 text-sm font-bold tracking-wide"
+        >
+          © 2024 IslandPaw Paradise Co. All rights reserved. Designed with 🏝️
+          for island lovers.
+        </div>
+      </div>
+      <div
+        class="absolute -bottom-20 -left-20 w-80 h-80 bg-hot-pink/5 rounded-full blur-3xl"
+      ></div>
+    </footer>
+  </body>
+</html>
