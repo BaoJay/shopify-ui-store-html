@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Checkout - Pawuni</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#E8A334",
+              "background-light": "#f8f7f6",
+              "background-dark": "#211b11",
+              "form-bg": "#ffffff",
+            },
+            fontFamily: {
+              display: "Plus Jakarta Sans",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              "2xl": "1rem",
+              "3xl": "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .fill-1 {
+        font-variation-settings: "FILL" 1;
+      }
+      .step-active {
+        @apply text-primary font-bold;
+      }
+      .step-inactive {
+        @apply text-[#897c61];
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-white"
+  >
+    <div
+      class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-solid border-[#e6e2db] dark:border-[#3d3424] px-4 md:px-10 lg:px-40 py-4"
+        >
+          <div
+            class="flex items-center justify-between whitespace-nowrap max-w-[1200px] mx-auto w-full"
+          >
+            <a
+              class="flex items-center gap-2 text-[#181611] dark:text-white"
+              href="/paw-minimal-home-page.html"
+            >
+              <div class="text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-3xl">pets</span>
+              </div>
+              <h2
+                class="text-[#181611] dark:text-white text-xl font-extrabold leading-tight tracking-[-0.015em]"
+              >
+                Pawuni
+              </h2>
+            </a>
+            <div
+              class="flex items-center gap-2 text-sm font-semibold text-[#897c61]"
+            >
+              <span class="material-symbols-outlined text-primary text-xl"
+                >lock</span
+              >
+              Secure Checkout
+            </div>
+          </div>
+        </header>
+        <main class="flex-1 max-w-[1200px] mx-auto w-full px-4 lg:px-10 py-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-8 flex flex-col gap-8">
+              <nav class="flex items-center gap-4 text-sm mb-2">
+                <div class="flex items-center gap-2 text-[#897c61]">
+                  <span
+                    class="flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary text-xs font-bold"
+                    >1</span
+                  >
+                  <span>Shipping</span>
+                </div>
+                <span class="material-symbols-outlined text-[#e6e2db] text-sm"
+                  >chevron_right</span
+                >
+                <div class="flex items-center gap-2 text-primary font-bold">
+                  <span
+                    class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold"
+                    >2</span
+                  >
+                  <span>Payment</span>
+                </div>
+                <span class="material-symbols-outlined text-[#e6e2db] text-sm"
+                  >chevron_right</span
+                >
+                <div class="flex items-center gap-2 text-[#897c61]">
+                  <span
+                    class="flex items-center justify-center w-6 h-6 rounded-full bg-[#ecebe8] dark:bg-[#3d3424] text-[#897c61] text-xs font-bold"
+                    >3</span
+                  >
+                  <span>Review</span>
+                </div>
+              </nav>
+              <div
+                class="bg-white dark:bg-[#2c2415] p-8 rounded-3xl border border-[#e6e2db] dark:border-[#3d3424] shadow-sm"
+              >
+                <h2 class="text-2xl font-black mb-8">Payment Method</h2>
+                <form class="flex flex-col gap-8">
+                  <div class="flex flex-col gap-4">
+                    <label
+                      class="relative flex items-center p-4 rounded-2xl border-2 border-primary bg-primary/5 cursor-pointer"
+                    >
+                      <input
+                        checked=""
+                        class="w-5 h-5 text-primary border-[#e6e2db] focus:ring-primary"
+                        name="payment_method"
+                        type="radio"
+                      />
+                      <div
+                        class="ml-4 flex items-center justify-between w-full"
+                      >
+                        <span class="font-bold">Credit / Debit Card</span>
+                        <div class="flex gap-1">
+                          <span class="material-symbols-outlined text-[#897c61]"
+                            >credit_card</span
+                          >
+                        </div>
+                      </div>
+                    </label>
+                    <label
+                      class="relative flex items-center p-4 rounded-2xl border border-[#e6e2db] dark:border-[#3d3424] hover:bg-[#fcfbf9] dark:hover:bg-[#3d3424] cursor-pointer"
+                    >
+                      <input
+                        class="w-5 h-5 text-primary border-[#e6e2db] focus:ring-primary"
+                        name="payment_method"
+                        type="radio"
+                      />
+                      <div
+                        class="ml-4 flex items-center justify-between w-full"
+                      >
+                        <span class="font-bold">PayPal</span>
+                        <span class="material-symbols-outlined text-[#897c61]"
+                          >account_balance_wallet</span
+                        >
+                      </div>
+                    </label>
+                  </div>
+                  <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-2">
+                      <label class="text-sm font-bold text-[#897c61]"
+                        >Card Number</label
+                      >
+                      <div class="relative">
+                        <input
+                          class="w-full h-12 rounded-xl border-[#e6e2db] dark:border-[#3d3424] bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary px-4 text-sm"
+                          placeholder="0000 0000 0000 0000"
+                          type="text"
+                        />
+                        <span
+                          class="absolute right-4 top-3 material-symbols-outlined text-[#897c61] text-xl"
+                          >credit_card</span
+                        >
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                      <div class="flex flex-col gap-2">
+                        <label class="text-sm font-bold text-[#897c61]"
+                          >Expiry Date</label
+                        >
+                        <input
+                          class="w-full h-12 rounded-xl border-[#e6e2db] dark:border-[#3d3424] bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary px-4 text-sm"
+                          placeholder="MM / YY"
+                          type="text"
+                        />
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <label class="text-sm font-bold text-[#897c61]"
+                          >CVV</label
+                        >
+                        <div class="relative">
+                          <input
+                            class="w-full h-12 rounded-xl border-[#e6e2db] dark:border-[#3d3424] bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary px-4 text-sm"
+                            placeholder="123"
+                            type="password"
+                          />
+                          <span
+                            class="absolute right-4 top-3 material-symbols-outlined text-[#897c61] text-xl"
+                            >help</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 py-2">
+                      <input
+                        class="rounded text-primary focus:ring-primary border-[#e6e2db]"
+                        id="save_card"
+                        type="checkbox"
+                      />
+                      <label
+                        class="text-sm text-[#5b513d] dark:text-[#c4bdb0]"
+                        for="save_card"
+                        >Save card details for future purchases</label
+                      >
+                    </div>
+                  </div>
+                  <button
+                    class="w-full bg-primary text-[#181611] font-black h-14 rounded-2xl flex items-center justify-center gap-3 hover:scale-[1.01] transition-transform shadow-lg shadow-primary/20"
+                    type="submit"
+                  >
+                    <span class="material-symbols-outlined">lock</span>
+                    Pay $29.00 Now
+                  </button>
+                </form>
+              </div>
+              <div
+                class="flex flex-wrap items-center justify-center gap-8 py-4 opacity-70"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >encrypted</span
+                  >
+                  <span class="text-xs font-bold uppercase tracking-wider"
+                    >Encrypted Payment</span
+                  >
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >verified</span
+                  >
+                  <span class="text-xs font-bold uppercase tracking-wider"
+                    >Secure Checkout</span
+                  >
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >autorenew</span
+                  >
+                  <span class="text-xs font-bold uppercase tracking-wider"
+                    >Easy Returns</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-4">
+              <div
+                class="sticky top-28 bg-white dark:bg-[#2c2415] rounded-3xl border border-[#e6e2db] dark:border-[#3d3424] overflow-hidden"
+              >
+                <div
+                  class="p-6 border-b border-[#e6e2db] dark:border-[#3d3424]"
+                >
+                  <h3 class="text-lg font-black">Order Summary</h3>
+                </div>
+                <div class="p-6 flex flex-col gap-6">
+                  <div class="flex gap-4">
+                    <div
+                      class="w-20 h-20 rounded-xl overflow-hidden bg-[#f8f7f6] shrink-0 border border-[#e6e2db] dark:border-[#3d3424]"
+                    >
+                      <img
+                        alt="Personalized Leather Collar"
+                        class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Xz-P1M8aKkVb9kkasOcibpG2gH04coLhKYwLWrVZTrEYa6k1zlEEb5RtlGegTXYbgNbNvkjiPkzh4zttsvtzv5280LsCl3E022jhYHq58eVPCKp4GTZSMLqSUtjz5GHtvPFSnnFSoRoeR6wcadcVbYmCH9VP4J5qx_QyQckpc4GbyQpmk26RI5yX_ILYTSs6agND8aCHr20YKMbhJunE1J4H_NYJtqGTqfFAHmvRdvcxjh_CPSvcrGams5S-e7Exin_B4y19SgIy"
+                      />
+                    </div>
+                    <div class="flex flex-col justify-between py-1">
+                      <div>
+                        <h4 class="text-sm font-bold line-clamp-1">
+                          Personalized Leather Collar
+                        </h4>
+                        <p class="text-[10px] text-[#897c61] mt-1">
+                          Tan / Buddy / 123-456-7890
+                        </p>
+                      </div>
+                      <div class="flex items-center justify-between mt-auto">
+                        <span class="text-xs font-semibold">Qty: 1</span>
+                        <span class="text-sm font-bold text-primary"
+                          >$24.00</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col gap-3 pt-4 border-t border-[#e6e2db] dark:border-[#3d3424]"
+                  >
+                    <div class="flex justify-between text-sm">
+                      <span class="text-[#897c61]">Subtotal</span>
+                      <span class="font-semibold">$24.00</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                      <span class="text-[#897c61]">Shipping</span>
+                      <span class="text-green-600 font-semibold">Free</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                      <span class="text-[#897c61]">Tax</span>
+                      <span class="font-semibold">$5.00</span>
+                    </div>
+                  </div>
+                  <div
+                    class="flex justify-between items-baseline pt-4 border-t border-dashed border-[#e6e2db] dark:border-[#3d3424]"
+                  >
+                    <span class="text-lg font-black">Total</span>
+                    <span class="text-2xl font-black text-primary">$29.00</span>
+                  </div>
+                  <div class="mt-2">
+                    <label
+                      class="text-xs font-bold text-[#897c61] uppercase tracking-wider mb-2 block"
+                      >Promo Code</label
+                    >
+                    <div class="flex gap-2">
+                      <input
+                        class="flex-1 h-10 rounded-xl border-[#e6e2db] dark:border-[#3d3424] bg-background-light dark:bg-background-dark px-4 text-xs"
+                        placeholder="Enter code"
+                        type="text"
+                      />
+                      <button
+                        class="px-4 bg-[#ecebe8] dark:bg-[#3d3424] text-xs font-bold rounded-xl hover:bg-primary/20 transition-colors"
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-primary/5 p-6 border-t border-[#e6e2db] dark:border-[#3d3424]"
+                >
+                  <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary mt-0.5"
+                      >verified_user</span
+                    >
+                    <div>
+                      <p class="text-xs font-bold mb-1">PetJoy Guarantee</p>
+                      <p
+                        class="text-[10px] text-[#5b513d] dark:text-[#c4bdb0] leading-relaxed"
+                      >
+                        Not happy with the fit or style? We offer 30-day free
+                        returns on all items.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer
+          class="bg-white dark:bg-[#221c10] border-t border-[#e6e2db] dark:border-[#3d3424] px-4 md:px-10 lg:px-40 py-12 mt-auto"
+        >
+          <div
+            class="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-10"
+          >
+            <div class="col-span-2 md:col-span-1">
+              <div class="flex items-center gap-2 mb-6">
+                <span class="material-symbols-outlined text-primary">pets</span>
+                <span class="text-lg font-black">Pawuni</span>
+              </div>
+              <p class="text-sm text-[#897c61] leading-relaxed">
+                Secure payment processing provided by industry leaders.
+              </p>
+            </div>
+            <div>
+              <h4
+                class="font-bold mb-4 uppercase text-xs tracking-widest text-[#897c61]"
+              >
+                Help
+              </h4>
+              <ul
+                class="flex flex-col gap-2 text-sm text-[#5b513d] dark:text-[#c4bdb0]"
+              >
+                <li>
+                  <a class="hover:text-primary" href="#">Shipping Info</a>
+                </li>
+                <li>
+                  <a class="hover:text-primary" href="#">Return Policy</a>
+                </li>
+                <li>
+                  <a class="hover:text-primary" href="#">Contact Support</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4
+                class="font-bold mb-4 uppercase text-xs tracking-widest text-[#897c61]"
+              >
+                Legal
+              </h4>
+              <ul
+                class="flex flex-col gap-2 text-sm text-[#5b513d] dark:text-[#c4bdb0]"
+              >
+                <li>
+                  <a class="hover:text-primary" href="#">Terms of Service</a>
+                </li>
+                <li>
+                  <a class="hover:text-primary" href="#">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4
+                class="font-bold mb-4 uppercase text-xs tracking-widest text-[#897c61]"
+              >
+                Methods
+              </h4>
+              <div class="flex gap-2 flex-wrap">
+                <div
+                  class="w-10 h-6 bg-[#ecebe8] dark:bg-[#3d3424] rounded-md flex items-center justify-center text-[8px] font-bold"
+                >
+                  VISA
+                </div>
+                <div
+                  class="w-10 h-6 bg-[#ecebe8] dark:bg-[#3d3424] rounded-md flex items-center justify-center text-[8px] font-bold"
+                >
+                  MC
+                </div>
+                <div
+                  class="w-10 h-6 bg-[#ecebe8] dark:bg-[#3d3424] rounded-md flex items-center justify-center text-[8px] font-bold"
+                >
+                  AMEX
+                </div>
+                <div
+                  class="w-10 h-6 bg-[#ecebe8] dark:bg-[#3d3424] rounded-md flex items-center justify-center text-[8px] font-bold"
+                >
+                  PP
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#e6e2db] dark:border-[#3d3424] text-center text-xs text-[#897c61]"
+          >
+            © 2024 Pawuni Inc. All transactions are secure and encrypted.
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
